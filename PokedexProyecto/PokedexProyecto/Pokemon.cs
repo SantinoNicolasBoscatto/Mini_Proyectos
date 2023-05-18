@@ -12,6 +12,8 @@ namespace PokedexProyecto
         public int NumeroPokedex { get; set; }
         public string DescripcionDePokemon { get; set; }
         public bool shiny { get; set; }
+        public string Sprite { get; set; }
+        public string Sprite3d { get; set; }
         public Tipo TipoDeElemento { get; set; }
         public Tipo Debilidad { get; set; }
         public StatsBase EstadisticasBase { get; set; }
