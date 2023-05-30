@@ -35,7 +35,12 @@ namespace PokedexProyecto
             this.SiguientePokemon = new System.Windows.Forms.Button();
             this.AnteriorPokemon = new System.Windows.Forms.Button();
             this.alphaBlendTextBox1 = new ZBobb.AlphaBlendTextBox();
+            this.Buscar = new System.Windows.Forms.Button();
+            this.Sprite3d = new System.Windows.Forms.Button();
+            this.GritoBoton = new PokedexProyecto.BotonCircular();
+            this.Agregar = new PokedexProyecto.BotonCircular();
             this.Apagado = new PokedexProyecto.BotonCircular();
+            this.NumeroBox = new ZBobb.AlphaBlendTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Pokedex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPokemon)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +50,7 @@ namespace PokedexProyecto
             this.Pokedex.Image = global::PokedexProyecto.Properties.Resources.Poke;
             this.Pokedex.Location = new System.Drawing.Point(-1, 0);
             this.Pokedex.Name = "Pokedex";
-            this.Pokedex.Size = new System.Drawing.Size(769, 402);
+            this.Pokedex.Size = new System.Drawing.Size(769, 403);
             this.Pokedex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pokedex.TabIndex = 0;
             this.Pokedex.TabStop = false;
@@ -55,9 +60,9 @@ namespace PokedexProyecto
             // PictureBoxPokemon
             // 
             this.PictureBoxPokemon.BackColor = System.Drawing.Color.DimGray;
-            this.PictureBoxPokemon.Location = new System.Drawing.Point(124, 73);
+            this.PictureBoxPokemon.Location = new System.Drawing.Point(99, 72);
             this.PictureBoxPokemon.Name = "PictureBoxPokemon";
-            this.PictureBoxPokemon.Size = new System.Drawing.Size(119, 128);
+            this.PictureBoxPokemon.Size = new System.Drawing.Size(181, 133);
             this.PictureBoxPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxPokemon.TabIndex = 1;
             this.PictureBoxPokemon.TabStop = false;
@@ -96,12 +101,73 @@ namespace PokedexProyecto
             this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.alphaBlendTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.alphaBlendTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphaBlendTextBox1.Location = new System.Drawing.Point(450, 49);
+            this.alphaBlendTextBox1.Location = new System.Drawing.Point(447, 45);
             this.alphaBlendTextBox1.Multiline = true;
             this.alphaBlendTextBox1.Name = "alphaBlendTextBox1";
             this.alphaBlendTextBox1.ReadOnly = true;
-            this.alphaBlendTextBox1.Size = new System.Drawing.Size(281, 111);
+            this.alphaBlendTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.alphaBlendTextBox1.Size = new System.Drawing.Size(289, 115);
             this.alphaBlendTextBox1.TabIndex = 5;
+            // 
+            // Buscar
+            // 
+            this.Buscar.FlatAppearance.BorderSize = 0;
+            this.Buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGoldenrod;
+            this.Buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
+            this.Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscar.Location = new System.Drawing.Point(489, 359);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(93, 35);
+            this.Buscar.TabIndex = 6;
+            this.Buscar.Text = "Buscar";
+            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            // 
+            // Sprite3d
+            // 
+            this.Sprite3d.BackColor = System.Drawing.Color.Transparent;
+            this.Sprite3d.FlatAppearance.BorderSize = 0;
+            this.Sprite3d.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Sprite3d.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.Sprite3d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sprite3d.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sprite3d.ForeColor = System.Drawing.Color.White;
+            this.Sprite3d.Location = new System.Drawing.Point(463, 184);
+            this.Sprite3d.Name = "Sprite3d";
+            this.Sprite3d.Size = new System.Drawing.Size(50, 36);
+            this.Sprite3d.TabIndex = 10;
+            this.Sprite3d.Text = "3D";
+            this.Sprite3d.UseVisualStyleBackColor = false;
+            this.Sprite3d.Click += new System.EventHandler(this.Sprite3d_Click);
+            // 
+            // GritoBoton
+            // 
+            this.GritoBoton.BackColor = System.Drawing.Color.Transparent;
+            this.GritoBoton.FlatAppearance.BorderSize = 0;
+            this.GritoBoton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.GritoBoton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.GritoBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GritoBoton.Location = new System.Drawing.Point(87, 222);
+            this.GritoBoton.Name = "GritoBoton";
+            this.GritoBoton.Size = new System.Drawing.Size(30, 30);
+            this.GritoBoton.TabIndex = 12;
+            this.GritoBoton.UseVisualStyleBackColor = false;
+            this.GritoBoton.Click += new System.EventHandler(this.GritoBoton_Click);
+            // 
+            // Agregar
+            // 
+            this.Agregar.BackColor = System.Drawing.Color.Transparent;
+            this.Agregar.FlatAppearance.BorderSize = 0;
+            this.Agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Agregar.Location = new System.Drawing.Point(687, 311);
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Size = new System.Drawing.Size(30, 30);
+            this.Agregar.TabIndex = 7;
+            this.Agregar.UseVisualStyleBackColor = false;
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // Apagado
             // 
@@ -118,11 +184,29 @@ namespace PokedexProyecto
             this.Apagado.UseVisualStyleBackColor = false;
             this.Apagado.Click += new System.EventHandler(this.Apagado_Click);
             // 
+            // NumeroBox
+            // 
+            this.NumeroBox.BackAlpha = 10;
+            this.NumeroBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NumeroBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumeroBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumeroBox.Location = new System.Drawing.Point(135, 349);
+            this.NumeroBox.Multiline = true;
+            this.NumeroBox.Name = "NumeroBox";
+            this.NumeroBox.Size = new System.Drawing.Size(72, 35);
+            this.NumeroBox.TabIndex = 13;
+            this.NumeroBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmPokemons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 398);
+            this.ClientSize = new System.Drawing.Size(766, 401);
+            this.Controls.Add(this.NumeroBox);
+            this.Controls.Add(this.GritoBoton);
+            this.Controls.Add(this.Sprite3d);
+            this.Controls.Add(this.Agregar);
+            this.Controls.Add(this.Buscar);
             this.Controls.Add(this.alphaBlendTextBox1);
             this.Controls.Add(this.AnteriorPokemon);
             this.Controls.Add(this.SiguientePokemon);
@@ -152,6 +236,11 @@ namespace PokedexProyecto
         private System.Windows.Forms.Button SiguientePokemon;
         private System.Windows.Forms.Button AnteriorPokemon;
         private ZBobb.AlphaBlendTextBox alphaBlendTextBox1;
+        private System.Windows.Forms.Button Buscar;
+        private BotonCircular Agregar;
+        private System.Windows.Forms.Button Sprite3d;
+        private BotonCircular GritoBoton;
+        private ZBobb.AlphaBlendTextBox NumeroBox;
     }
 }
 
