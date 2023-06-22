@@ -37,6 +37,7 @@
       <HintPath>..\..\..\..\Downloads\AlphaBlendTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,19 +50,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Elemento.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pokemon.cs" />
-    <Compile Include="PokemonNegocio.cs" />
+    <Compile Include="frmAltaPokemon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaPokemon.Designer.cs">
+      <DependentUpon>frmAltaPokemon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltaPokemon.resx">
+      <DependentUpon>frmAltaPokemon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,6 +98,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btn-apagado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModeloDeDominio\ModeloDeDominio.csproj">
+      <Project>{56c58919-23ed-4ced-8872-dd4ee26f463a}</Project>
+      <Name>ModeloDeDominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{dc58f2c0-affc-4cfd-a657-9c3b4a9d792c}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

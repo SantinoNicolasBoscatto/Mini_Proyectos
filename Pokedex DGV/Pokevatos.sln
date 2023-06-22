@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.33214.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokevatos", "Pokevatos\Pokevatos.csproj", "{7D329609-349A-440F-BA4E-36FBC2C28293}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModeloDeDominio", "ModeloDeDominio\ModeloDeDominio.csproj", "{56C58919-23ED-4CED-8872-DD4EE26F463A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{DC58F2C0-AFFC-4CFD-A657-9C3B4A9D792C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7D329609-349A-440F-BA4E-36FBC2C28293}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D329609-349A-440F-BA4E-36FBC2C28293}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D329609-349A-440F-BA4E-36FBC2C28293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56C58919-23ED-4CED-8872-DD4EE26F463A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C58919-23ED-4CED-8872-DD4EE26F463A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C58919-23ED-4CED-8872-DD4EE26F463A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C58919-23ED-4CED-8872-DD4EE26F463A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC58F2C0-AFFC-4CFD-A657-9C3B4A9D792C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC58F2C0-AFFC-4CFD-A657-9C3B4A9D792C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC58F2C0-AFFC-4CFD-A657-9C3B4A9D792C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC58F2C0-AFFC-4CFD-A657-9C3B4A9D792C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

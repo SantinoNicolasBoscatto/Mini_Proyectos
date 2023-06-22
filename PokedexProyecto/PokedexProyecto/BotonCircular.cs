@@ -10,6 +10,8 @@ namespace PokedexProyecto
 {
     class BotonCircular:Button
     {
+        public double Opacity { get; internal set; }
+
         protected override void OnPaint(PaintEventArgs pevent)
         {
             GraphicsPath path = new GraphicsPath();

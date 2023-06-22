@@ -83,6 +83,16 @@ namespace PokedexProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_pokedex_template_by_hatirem_pokemon_pokedex_background {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-pokedex-template-by-hatirem-pokemon-pokedex-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);

@@ -56,11 +56,13 @@ namespace PokedexProyecto
             this.DefEspBox = new System.Windows.Forms.NumericUpDown();
             this.VelocidadBox = new System.Windows.Forms.NumericUpDown();
             this.TipoComboBox = new System.Windows.Forms.ComboBox();
-            this.DebilidadComboBox = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.DebComboBox = new System.Windows.Forms.ComboBox();
+            this.Sprite2d = new System.Windows.Forms.PictureBox();
+            this.Sprite3d = new System.Windows.Forms.PictureBox();
             this.AgregarButton = new System.Windows.Forms.Button();
             this.CancelarButton = new System.Windows.Forms.Button();
+            this.Tipo2ComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumeroBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HpBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AtaqueBox)).BeginInit();
@@ -68,8 +70,8 @@ namespace PokedexProyecto
             ((System.ComponentModel.ISupportInitialize)(this.AtaqueEspBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DefEspBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VelocidadBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sprite2d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sprite3d)).BeginInit();
             this.SuspendLayout();
             // 
             // NombreLabel
@@ -234,7 +236,7 @@ namespace PokedexProyecto
             this.DebLabel.BackColor = System.Drawing.Color.Transparent;
             this.DebLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DebLabel.ForeColor = System.Drawing.Color.ForestGreen;
-            this.DebLabel.Location = new System.Drawing.Point(19, 558);
+            this.DebLabel.Location = new System.Drawing.Point(26, 601);
             this.DebLabel.Name = "DebLabel";
             this.DebLabel.Size = new System.Drawing.Size(77, 18);
             this.DebLabel.TabIndex = 13;
@@ -242,14 +244,14 @@ namespace PokedexProyecto
             // 
             // NombreBox
             // 
-            this.NombreBox.Location = new System.Drawing.Point(110, 4);
+            this.NombreBox.Location = new System.Drawing.Point(113, 4);
             this.NombreBox.Name = "NombreBox";
             this.NombreBox.Size = new System.Drawing.Size(120, 22);
             this.NombreBox.TabIndex = 14;
             // 
             // DescripcionBox
             // 
-            this.DescripcionBox.Location = new System.Drawing.Point(110, 89);
+            this.DescripcionBox.Location = new System.Drawing.Point(113, 90);
             this.DescripcionBox.Multiline = true;
             this.DescripcionBox.Name = "DescripcionBox";
             this.DescripcionBox.Size = new System.Drawing.Size(240, 68);
@@ -257,7 +259,7 @@ namespace PokedexProyecto
             // 
             // ImagenBox
             // 
-            this.ImagenBox.Location = new System.Drawing.Point(110, 181);
+            this.ImagenBox.Location = new System.Drawing.Point(113, 181);
             this.ImagenBox.Name = "ImagenBox";
             this.ImagenBox.Size = new System.Drawing.Size(201, 22);
             this.ImagenBox.TabIndex = 17;
@@ -265,7 +267,7 @@ namespace PokedexProyecto
             // 
             // Imagen3dBox
             // 
-            this.Imagen3dBox.Location = new System.Drawing.Point(110, 452);
+            this.Imagen3dBox.Location = new System.Drawing.Point(113, 452);
             this.Imagen3dBox.Name = "Imagen3dBox";
             this.Imagen3dBox.Size = new System.Drawing.Size(201, 22);
             this.Imagen3dBox.TabIndex = 19;
@@ -273,14 +275,19 @@ namespace PokedexProyecto
             // 
             // GritoBox
             // 
-            this.GritoBox.Location = new System.Drawing.Point(110, 491);
+            this.GritoBox.Location = new System.Drawing.Point(113, 491);
             this.GritoBox.Name = "GritoBox";
             this.GritoBox.Size = new System.Drawing.Size(100, 22);
             this.GritoBox.TabIndex = 20;
             // 
             // NumeroBox
             // 
-            this.NumeroBox.Location = new System.Drawing.Point(110, 42);
+            this.NumeroBox.Location = new System.Drawing.Point(113, 42);
+            this.NumeroBox.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
             this.NumeroBox.Name = "NumeroBox";
             this.NumeroBox.Size = new System.Drawing.Size(68, 22);
             this.NumeroBox.TabIndex = 21;
@@ -290,7 +297,7 @@ namespace PokedexProyecto
             this.HpBox.BackColor = System.Drawing.Color.LightGreen;
             this.HpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HpBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.HpBox.Location = new System.Drawing.Point(110, 219);
+            this.HpBox.Location = new System.Drawing.Point(113, 219);
             this.HpBox.Maximum = new decimal(new int[] {
             999,
             0,
@@ -303,7 +310,7 @@ namespace PokedexProyecto
             // AtaqueBox
             // 
             this.AtaqueBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.AtaqueBox.Location = new System.Drawing.Point(110, 255);
+            this.AtaqueBox.Location = new System.Drawing.Point(113, 255);
             this.AtaqueBox.Maximum = new decimal(new int[] {
             999,
             0,
@@ -316,7 +323,7 @@ namespace PokedexProyecto
             // DefensaBox
             // 
             this.DefensaBox.BackColor = System.Drawing.SystemColors.Highlight;
-            this.DefensaBox.Location = new System.Drawing.Point(110, 295);
+            this.DefensaBox.Location = new System.Drawing.Point(113, 295);
             this.DefensaBox.Maximum = new decimal(new int[] {
             999,
             0,
@@ -329,7 +336,7 @@ namespace PokedexProyecto
             // AtaqueEspBox
             // 
             this.AtaqueEspBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.AtaqueEspBox.Location = new System.Drawing.Point(110, 333);
+            this.AtaqueEspBox.Location = new System.Drawing.Point(113, 333);
             this.AtaqueEspBox.Maximum = new decimal(new int[] {
             999,
             0,
@@ -342,7 +349,7 @@ namespace PokedexProyecto
             // DefEspBox
             // 
             this.DefEspBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DefEspBox.Location = new System.Drawing.Point(110, 370);
+            this.DefEspBox.Location = new System.Drawing.Point(113, 370);
             this.DefEspBox.Maximum = new decimal(new int[] {
             999,
             0,
@@ -355,7 +362,7 @@ namespace PokedexProyecto
             // VelocidadBox
             // 
             this.VelocidadBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.VelocidadBox.Location = new System.Drawing.Point(110, 411);
+            this.VelocidadBox.Location = new System.Drawing.Point(113, 411);
             this.VelocidadBox.Maximum = new decimal(new int[] {
             999,
             0,
@@ -369,39 +376,41 @@ namespace PokedexProyecto
             // 
             this.TipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoComboBox.FormattingEnabled = true;
-            this.TipoComboBox.Location = new System.Drawing.Point(110, 526);
+            this.TipoComboBox.Location = new System.Drawing.Point(113, 526);
             this.TipoComboBox.Name = "TipoComboBox";
             this.TipoComboBox.Size = new System.Drawing.Size(100, 24);
             this.TipoComboBox.TabIndex = 28;
             // 
-            // DebilidadComboBox
+            // DebComboBox
             // 
-            this.DebilidadComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DebilidadComboBox.FormattingEnabled = true;
-            this.DebilidadComboBox.Location = new System.Drawing.Point(110, 558);
-            this.DebilidadComboBox.Name = "DebilidadComboBox";
-            this.DebilidadComboBox.Size = new System.Drawing.Size(100, 24);
-            this.DebilidadComboBox.TabIndex = 29;
+            this.DebComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DebComboBox.FormattingEnabled = true;
+            this.DebComboBox.Location = new System.Drawing.Point(117, 601);
+            this.DebComboBox.Name = "DebComboBox";
+            this.DebComboBox.Size = new System.Drawing.Size(100, 24);
+            this.DebComboBox.TabIndex = 29;
             // 
-            // pictureBox1
+            // Sprite2d
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(308, 182);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
+            this.Sprite2d.BackColor = System.Drawing.Color.Transparent;
+            this.Sprite2d.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Sprite2d.Location = new System.Drawing.Point(323, 186);
+            this.Sprite2d.Name = "Sprite2d";
+            this.Sprite2d.Size = new System.Drawing.Size(180, 180);
+            this.Sprite2d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Sprite2d.TabIndex = 30;
+            this.Sprite2d.TabStop = false;
             // 
-            // pictureBox2
+            // Sprite3d
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(308, 374);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(194, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
+            this.Sprite3d.BackColor = System.Drawing.Color.Transparent;
+            this.Sprite3d.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Sprite3d.Location = new System.Drawing.Point(323, 374);
+            this.Sprite3d.Name = "Sprite3d";
+            this.Sprite3d.Size = new System.Drawing.Size(180, 180);
+            this.Sprite3d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Sprite3d.TabIndex = 31;
+            this.Sprite3d.TabStop = false;
             // 
             // AgregarButton
             // 
@@ -423,6 +432,28 @@ namespace PokedexProyecto
             this.CancelarButton.UseVisualStyleBackColor = true;
             this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
+            // Tipo2ComboBox
+            // 
+            this.Tipo2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Tipo2ComboBox.FormattingEnabled = true;
+            this.Tipo2ComboBox.Location = new System.Drawing.Point(113, 562);
+            this.Tipo2ComboBox.Name = "Tipo2ComboBox";
+            this.Tipo2ComboBox.Size = new System.Drawing.Size(100, 24);
+            this.Tipo2ComboBox.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label1.Location = new System.Drawing.Point(15, 563);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 18);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Tipo Secu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -430,11 +461,13 @@ namespace PokedexProyecto
             this.BackgroundImage = global::PokedexProyecto.Properties.Resources.images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(512, 645);
+            this.Controls.Add(this.Tipo2ComboBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.AgregarButton);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.DebilidadComboBox);
+            this.Controls.Add(this.Sprite3d);
+            this.Controls.Add(this.Sprite2d);
+            this.Controls.Add(this.DebComboBox);
             this.Controls.Add(this.TipoComboBox);
             this.Controls.Add(this.VelocidadBox);
             this.Controls.Add(this.DefEspBox);
@@ -474,8 +507,8 @@ namespace PokedexProyecto
             ((System.ComponentModel.ISupportInitialize)(this.AtaqueEspBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DefEspBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VelocidadBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sprite2d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sprite3d)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,10 +543,12 @@ namespace PokedexProyecto
         private System.Windows.Forms.NumericUpDown DefEspBox;
         private System.Windows.Forms.NumericUpDown VelocidadBox;
         private System.Windows.Forms.ComboBox TipoComboBox;
-        private System.Windows.Forms.ComboBox DebilidadComboBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox DebComboBox;
+        private System.Windows.Forms.PictureBox Sprite2d;
+        private System.Windows.Forms.PictureBox Sprite3d;
         private System.Windows.Forms.Button AgregarButton;
         private System.Windows.Forms.Button CancelarButton;
+        private System.Windows.Forms.ComboBox Tipo2ComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

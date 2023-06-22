@@ -16,8 +16,14 @@ namespace PokedexProyecto
 {
     public partial class frmPokemons : Form
     {
-        int x = 0;
+        //Variables/Objetos
+        public static int x = 0;
         List<Pokemon> listaDePokemones = new List<Pokemon>();
+        bool bdSprite = true;
+        bool banderaDescripcionTipo = true;
+        int conta = 0;
+        ConexionPokemonDataBase PokemonNegocio = new ConexionPokemonDataBase();
+        //Inicio Del Forms
         public frmPokemons()
         {
             InitializeComponent();
@@ -48,13 +54,33 @@ namespace PokedexProyecto
             alphaBlendTextBox1.Visible = true;
             Agregar.Parent = Pokedex;
             Agregar.Visible = true;
-        }
-        bool bdSprite = true; 
+            PictureBoxPokemon.Parent = Pokedex;
+            PictureBoxPokemon.Visible = true;
+            StatsBaseBoton.BackColor = Color.Transparent;
+            StatsBaseBoton.Parent = Pokedex;
+            StatsBaseBoton.Visible = true;
+            VerTipoBoton.BackColor = Color.Transparent;
+            VerTipoBoton.Parent = Pokedex;
+            VerTipoBoton.Visible = true;
+            TipoBox1.BackColor = Color.Transparent;
+            TipoBox1.Parent = Pokedex;
+            TipoBox1.Visible = true;
+            TipoBox2.BackColor = Color.Transparent;
+            TipoBox2.Parent = Pokedex;
+            TipoBox2.Visible = true;
+            ModificarBoton.BackColor = Color.Transparent;
+            ModificarBoton.Parent = Pokedex;
+            ModificarBoton.Visible = true;
+        }        
+        //Carga Total Funcion
         public void CargarTabla ()
         {
-            ConexionPokemonDataBase PokemonNegocio = new ConexionPokemonDataBase();
             listaDePokemones = PokemonNegocio.ListarPokemon();
-            CargarSprite(listaDePokemones[x].Sprite);
+            if (bdSprite)
+                CargarSprite(listaDePokemones[x].Sprite);
+            else
+                CargarSprite(listaDePokemones[x].Sprite3d);
+
             CargarEntradaPokedex(listaDePokemones[x].DescripcionDePokemon);
             CargarNumeroPokedex(listaDePokemones[x].NumeroPokedex);
             using (AudioFileReader audioFileReader = new AudioFileReader(listaDePokemones[x].GritoPokemon))
@@ -77,12 +103,13 @@ namespace PokedexProyecto
                 Cry.Play();
             }
         }
+        //Carga del FORMS
         private void frmPokemons_Load(object sender, EventArgs e)
         {
             CargarTabla();
-            
+             conta = PokemonNegocio.PokeBichosConta();
         }
-
+        //CARGAS
         private void CargarSprite(string Sprite2d)
         {
             try
@@ -131,10 +158,30 @@ namespace PokedexProyecto
             }
 
         }
-        private void Apagado_Click(object sender, EventArgs e)
+        //TIPOS DE CARGA, CORREGIR FUNCION EN 1
+        private void CargarTipos(string Tipo)
         {
-            this.Close();
+            try
+            {
+                TipoBox1.Load(Tipo);
+            }
+            catch (Exception)
+            {
+                TipoBox1.Load("");
+            }
         }
+        private void CargarTipos2(string Tipo2)
+        {
+            try
+            {
+                TipoBox2.Load(Tipo2);
+            }
+            catch (Exception)
+            {
+                TipoBox2.Load("https://static.wikia.nocookie.net/bec6f033-936d-48c5-9c1e-7fb7207e28af/scale-to-width/755");
+            }
+        } 
+        //MOUSE FUNCION
         Point mouseLoc;
         private void frmPokemons_MouseDown(object sender, MouseEventArgs e)
         {
@@ -151,16 +198,14 @@ namespace PokedexProyecto
                 this.Location = new Point(dx, dy);
             }
         }
+        //BOTONES
         private void SiguientePokemon_Click(object sender, EventArgs e)
         {
             try
             {x++; 
              CargarTabla();
-             Sprite3d.Text = "3D";
-                if (!bdSprite)
-                {
-                    bdSprite = true;
-                }
+                CargarTipos(listaDePokemones[x].TipoDeElemento.ImagenTipo);
+                CargarTipos2(listaDePokemones[x].TipoDeElemento2.ImagenTipo);
             }
             catch (Exception)
             {x--;}     
@@ -170,11 +215,8 @@ namespace PokedexProyecto
             try
             {x--;
              CargarTabla();
-             Sprite3d.Text = "3D";
-                if (!bdSprite)
-                {
-                    bdSprite = true;
-                }
+                CargarTipos(listaDePokemones[x].TipoDeElemento.ImagenTipo);
+                CargarTipos2(listaDePokemones[x].TipoDeElemento2.ImagenTipo);
             }
             catch (Exception)
             {x++;}
@@ -207,6 +249,7 @@ namespace PokedexProyecto
                     bdSprite = true;
                     Sprite3d.Text = "3D";
                 }
+
             }
             catch (Exception)
             {
@@ -216,33 +259,153 @@ namespace PokedexProyecto
             
             
         }
-
         int y;
+        bool bd = true;
         private void Buscar_Click(object sender, EventArgs e)
         {
-            y = x;
-            x = int.Parse(NumeroBox.Text);
+        
             try
             {
-                if (x == listaDePokemones[x - 1].NumeroPokedex)
+                y = int.Parse(NumeroBox.Text);
+                //for (int i = 0; i < 15; i++)
+                int i = 0; 
+                while(i<conta)
                 {
-                    x = x - 1;
-                    CargarTabla();
+                    if (y == listaDePokemones[i].NumeroPokedex)
+                    {
+                        x = i;
+                        i = conta;
+                        CargarTabla();
+                        bd = false;
+                    }
+                    i++;
                 }
-                else
+                if (bd)
                 {
-                    x = y;
-                    y = y + 1;
-                    NumeroBox.Text = y.ToString("0");
+                    MessageBox.Show("El Pokemon no existe");
+                    NumeroBox.Text = listaDePokemones[x].NumeroPokedex.ToString("0");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR");
+                y = ObtenerIndice();
+                NumeroBox.Text = listaDePokemones[y].NumeroPokedex.ToString("0");
+            }
+        }
+        private void Apagado_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        public int ObtenerIndice()
+        {
+            return x;
+        }
+        private void StatsBaseBoton_Click(object sender, EventArgs e)
+        {
+            Form3 TercerVentana = new Form3();
+            TercerVentana.ShowDialog();
+        }
+        private void NumeroBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)&& !(char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+
+        }
+        private void VerTipoBoton_Click(object sender, EventArgs e)
+        {
+            if (banderaDescripcionTipo)
+            {
+                alphaBlendTextBox1.Visible = false;
+                TipoBox1.Visible = true;
+                TipoBox2.Visible = true;
+                CargarTipos(listaDePokemones[x].TipoDeElemento.ImagenTipo);
+                CargarTipos2(listaDePokemones[x].TipoDeElemento2.ImagenTipo);
+                //TipoBox1.Load("C:/Users/Santino/Desktop/C#/Repositorio GITHUB/Mini_Proyectos/PokedexProyecto/PokedexProyecto/TiposSimbolos/Acero.png");
+                banderaDescripcionTipo = false;
+                VerTipoBoton.Text = "Entr";
+            }
+            else
+            {
+                alphaBlendTextBox1.Visible = true;
+                banderaDescripcionTipo = true;
+                VerTipoBoton.Text = "Tipo";
+            }
+
+        }
+
+        private void ModificarBoton_Click(object sender, EventArgs e)
+        {
+            Pokemon pokeMod = listaDePokemones[x];
+            Form2 segundaVentana = new Form2(listaDePokemones[x]);
+            segundaVentana.ShowDialog();
+            CargarTabla();
+        }
+        string saver;
+        private void NumeroBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            List<Pokemon> listaFiltrada=null;
+            try
+            {
+                if 
+                (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9 || e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
+                {
+                    if (NumeroBox.Text != "")
+                    {
+                        listaFiltrada = listaDePokemones.FindAll(INDEX => INDEX.NumeroPokedex.ToString() == NumeroBox.Text);
+                        PictureBoxPokemon.Load(listaFiltrada[0].Sprite);
+                        if (bdSprite)
+                            CargarSprite(listaFiltrada[0].Sprite);
+                        else
+                            CargarSprite(listaFiltrada[0].Sprite3d);
+                        CargarEntradaPokedex(listaFiltrada[0].DescripcionDePokemon);
+                        CargarNumeroPokedex(listaFiltrada[0].NumeroPokedex);
+                        CargarTipos(listaFiltrada[0].TipoDeElemento.ImagenTipo);
+                        CargarTipos2(listaFiltrada[0].TipoDeElemento2.ImagenTipo);
+                        using (AudioFileReader audioFileReader = new AudioFileReader(listaFiltrada[0].GritoPokemon))
+                        {
+                            using (WaveOutEvent waveOutEvent = new WaveOutEvent())
+                            {
+                                // Bajar el volumen a la mitad (0.5)
+                                waveOutEvent.Volume = 0.05f;
+
+                                // Conectar el AudioFileReader al WaveOutEvent
+                                waveOutEvent.Init(audioFileReader);
+
+                                // Reproducir el sonido con el volumen ajustado
+                                waveOutEvent.Play();
+                            }
+
+                        }
+                        using (SoundPlayer Cry = new SoundPlayer(listaFiltrada[0].GritoPokemon))
+                        {
+                            Cry.Play();
+                        }
+                        saver = NumeroBox.Text;
+                        x = int.Parse(NumeroBox.Text);
+                        x--;
+                    }
                 }
                 
             }
             catch (Exception)
             {
-                MessageBox.Show("El Pokemon no existe");
-                x = y;
-                y = y + 1;
-                NumeroBox.Text = y.ToString("0");
+                //MessageBox.Show("Este Pokemon no esta Registrado");
+                NumeroBox.Text = saver;
+            }
+
+        }
+
+        private void NumeroBox_TextChanged(object sender, EventArgs e)
+        {
+            int selector = NumeroBox.SelectionLength;
+            selector++;
+            NumeroBox.SelectionStart = selector;
+            if (NumeroBox.Text!="")
+            {
+                NumeroBox.Select(39,0);
             }
         }
     }

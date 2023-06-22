@@ -1,95 +1,123 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Calculadora : Form
     {
-        public Form1()
+        public Calculadora()
         {
             InitializeComponent();
         }
         char signo = '.';
-        int resultado = 0, numeroX=0;
+        decimal resultado = 0, numeroX=0;
         bool bd2 = true;
         bool saveme = true;
-        
+        bool check = true;
+
         private void Suma_Click(object sender, EventArgs e)
         {
             if (bd2==true)
             {
-                signo = '+';
-                numeroX = int.Parse(VisorCalculadora.Text);
-                Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                
+                try
+                {
+                    signo = '+';
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                    Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                }
+                catch (Exception)
+                {
+                }
                 VisorCalculadora.Clear();
                 VisorCalculadora.Focus();
-                
             }
             else if (bd2==false)
             {
-                numeroX = int.Parse(VisorCalculadora.Text);
-                Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                try
+                {
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                    Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                }
+                catch (Exception)
+                {
+                }               
                 VisorCalculadora.Clear();
                 VisorCalculadora.Focus();
                 signo = '+';
             }
  
             
-        }
-      
+        }     
         private void Resta_Click(object sender, EventArgs e)
         {
             if (bd2 == true)
             {
                 signo = '-';
-                numeroX = int.Parse(VisorCalculadora.Text);
-                Operacion(signo, ref resultado, ref numeroX,  ref bd2);
+                try
+                {
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                    Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                }
+                catch (Exception)
+                {
+
+                }   
                 VisorCalculadora.Clear();
                 VisorCalculadora.Focus();
-                
             }
 
             else if (bd2 == false)
             {
-                numeroX = int.Parse(VisorCalculadora.Text);
-                Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                try
+                {
+                   numeroX = int.Parse(VisorCalculadora.Text);
+                   Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                }
+                catch (Exception)
+                {
+                }
                 VisorCalculadora.Clear();
                 VisorCalculadora.Focus();
                 signo = '-';
             }
         }
-
         private void Multiplicacion_Click(object sender, EventArgs e)
         {
             
             if (bd2 == true)
             {
                 signo = '*';
-                numeroX = int.Parse(VisorCalculadora.Text);
-                Operacion(signo, ref resultado, ref numeroX,ref bd2);
+                try
+                {
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                    Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                }
+                catch (Exception)
+                {
+
+                }
                 VisorCalculadora.Clear();
                 VisorCalculadora.Focus();
             }
 
             else if (bd2 == false)
             {
-                numeroX = int.Parse(VisorCalculadora.Text);
-                Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                try
+                {
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                    Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                }
+                catch (Exception)
+                {
+
+                }
                 VisorCalculadora.Clear();
                 VisorCalculadora.Focus();
                 signo = '*';
             }
         }
-
-        void Operacion(char signardo, ref int resultado, ref int numeroX, ref bool bd2)
+                void Operacion(char signardo, ref decimal resultado, ref decimal numeroX, ref bool bd2)
         {
             if (!bd2)
             {
@@ -141,15 +169,14 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-            private void VisiorCalculadora_KeyDown(object sender, KeyEventArgs e)
+        private void VisiorCalculadora_KeyDown(object sender, KeyEventArgs e)
         {
             VisorCalculadora.ReadOnly = false;
             if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9 ||
                 e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9 || e.KeyCode == Keys.Add || e.KeyCode == Keys.Subtract
-                || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide || e.KeyCode == Keys.Enter)
+                || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide || e.KeyCode == Keys.Enter || e.KeyCode == Keys.Oemcomma)
             {
-                if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9 || e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
+                if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9 || e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9 || e.KeyCode == Keys.Oemcomma)
                 {
                     if (saveme == true)
                     {
@@ -166,17 +193,29 @@ namespace WindowsFormsApp1
                 {
                     if (bd2 == true)
                     {
-                        signo = '+';
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            signo = '+';
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
                     }
 
                     else if (bd2 == false)
                     {
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
                         signo = '+';
@@ -188,16 +227,28 @@ namespace WindowsFormsApp1
                     if (bd2 == true)
                     {
                         signo = '+';
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
                     }
 
                     else if (bd2 == false)
                     {
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
                         signo = '+';
@@ -209,8 +260,14 @@ namespace WindowsFormsApp1
                     if (bd2 == true)
                     {
                         signo = '*';
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
 
@@ -218,8 +275,14 @@ namespace WindowsFormsApp1
 
                     else if (bd2 == false)
                     {
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
                         signo = '*';
@@ -230,16 +293,28 @@ namespace WindowsFormsApp1
                     if (bd2 == true)
                     {
                         signo = '/';
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
                     }
 
                     else if (bd2 == false)
                     {
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            numeroX = decimal.Parse(VisorCalculadora.Text);
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                        }
                         VisorCalculadora.Clear();
                         VisorCalculadora.Focus();
                         signo = '/';
@@ -248,35 +323,40 @@ namespace WindowsFormsApp1
 
                 else if (e.KeyCode == Keys.Enter)
                 {
-                    if (signo == '+')
+                    try
                     {
-                        resultado += int.Parse(VisorCalculadora.Text);
-                        MessageBox.Show(resultado.ToString());
+                        if (signo == '+')
+                        {
+                            resultado += decimal.Parse(VisorCalculadora.Text);
+                            VisorCalculadora.Text = resultado.ToString();
+                        }
+                        else if (signo == '-')
+                        {
+                            resultado -= decimal.Parse(VisorCalculadora.Text);
+                            VisorCalculadora.Text = resultado.ToString();
+                        }
+                        else if (signo == '*')
+                        {
+                            resultado *= decimal.Parse(VisorCalculadora.Text);
+                            VisorCalculadora.Text = resultado.ToString();
+                        }
+                        else if (signo == '/')
+                        {
+                            resultado /= decimal.Parse(VisorCalculadora.Text);
+                            VisorCalculadora.Text = resultado.ToString();
+                        }
+                        else if (signo == '.')
+                        {
+                            VisorCalculadora.Text = resultado.ToString();
+                        }
                     }
-                    else if (signo == '-')
+                    catch (Exception)
                     {
-                        resultado -= int.Parse(VisorCalculadora.Text);
-                        MessageBox.Show(resultado.ToString());
                     }
-                    else if (signo == '*')
-                    {
-                        resultado *= int.Parse(VisorCalculadora.Text);
-                        MessageBox.Show(resultado.ToString());
-                    }
-                    else if (signo == '/')
-                    {
-                        resultado /= int.Parse(VisorCalculadora.Text);
-                        MessageBox.Show("" + resultado);
-                    }
-                    else if (signo == '.')
-                    {
-                        MessageBox.Show(resultado.ToString());
-                    }
-
-                    VisorCalculadora.Clear();
+                    //VisorCalculadora.Clear();
                     resultado = 0;
-                    VisorCalculadora.Text = "0";
-                    VisorCalculadora.Focus();
+                    //VisorCalculadora.Text = "0";
+                    //VisorCalculadora.Focus();
                     bd2 = true;
                     saveme = true;
                 }
@@ -291,33 +371,48 @@ namespace WindowsFormsApp1
         }
         private void Igual_Click(object sender, EventArgs e)
         {
-            if (signo == '+')
+            try
             {
-                resultado += int.Parse(VisorCalculadora.Text);
-                MessageBox.Show("" + resultado);
-            }
-            else if(signo == '-')
-            {
-                resultado -= int.Parse(VisorCalculadora.Text);
-                MessageBox.Show("" + resultado);
-            }
+                if (signo == '+')
+                {
+                    resultado += decimal.Parse(VisorCalculadora.Text);
+                    VisorCalculadora.Text = resultado.ToString();
+                }
+                else if (signo == '-')
+                {
+                    resultado -= decimal.Parse(VisorCalculadora.Text);
+                    VisorCalculadora.Text = resultado.ToString();
+                }
 
-            else if (signo == '*')
-            {
-                resultado *= int.Parse(VisorCalculadora.Text);
-                MessageBox.Show("" + resultado);
-            }
+                else if (signo == '*')
+                {
+                    resultado *= decimal.Parse(VisorCalculadora.Text);
+                    VisorCalculadora.Text = resultado.ToString();
+                }
 
-            else if (signo == '/')
-            {
-                resultado /= int.Parse(VisorCalculadora.Text);
-                MessageBox.Show("" + resultado);
+                else if (signo == '/')
+                {
+                    resultado /= decimal.Parse(VisorCalculadora.Text);
+                    VisorCalculadora.Text = resultado.ToString();
+                }
+                else if (signo == '.')
+                {
+                    resultado += decimal.Parse(VisorCalculadora.Text);
+                    VisorCalculadora.Text = resultado.ToString();
+                }
             }
-            VisorCalculadora.Clear();
-            resultado = 0;
-            VisorCalculadora.Text = "";
-            VisorCalculadora.Focus();
-            bd2 = true;
+            catch (Exception)
+            {
+                VisorCalculadora.Clear();
+                resultado = 0;
+                VisorCalculadora.Text = "0";
+                bd2 = true;
+                saveme = true;
+                check = true;
+                VisorCalculadora.Focus();
+            }
+           
+            
         }
         private void ClearBox_Click(object sender, EventArgs e)
         {
@@ -326,6 +421,8 @@ namespace WindowsFormsApp1
             VisorCalculadora.Text = "0";
             bd2 = true;
             saveme = true;
+            check = true;
+            VisorCalculadora.Focus();
         }
         private void VisorCalculadora_TextChanged(object sender, EventArgs e)
         {
@@ -342,7 +439,6 @@ namespace WindowsFormsApp1
                 VisorCalculadora.Text = "";
             }
         }
-
         private void Division_Click(object sender, EventArgs e)
         {
             if (bd2 == true)
@@ -363,7 +459,317 @@ namespace WindowsFormsApp1
                 signo = '/';
             }
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "1";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "1";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "1";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
 
+            }
+            else
+            {
+                VisorCalculadora.Text += "1";
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "2";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            signo = '+';
+                            resultado = 0;
+                            check = false;
+                            numeroX = int.Parse(VisorCalculadora.Text);
+                            VisorCalculadora.Text = "2";
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Error Inesperado");
+                        }
+                        
+                    }
+                    
+                }
+                else
+                {
+                    VisorCalculadora.Text = "2";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "2";
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "3";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "3";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "3";
+            }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "4";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "4";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "4";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "4";
+            }
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "5";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "5";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "5";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "5";
+            }
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "6";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "6";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "6";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "6";
+            }
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "7";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "7";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "7";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "7";
+            }
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "8";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "8";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "8";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "8";
+            }
+        }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "9";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "9";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "9";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+            }
+            else
+            {
+                VisorCalculadora.Text += "9";
+            }
+        }
         private void Form1_Shown(object sender, EventArgs e)
         {
             VisorCalculadora.Focus();

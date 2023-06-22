@@ -10,6 +10,7 @@ namespace ModeloDeDominio
     {
         public string TipoPokemon { get; set; }
         public int Id { get; set; }
+        public string ImagenTipo { get; set; }
         public override string ToString()
         {
             return TipoPokemon;
