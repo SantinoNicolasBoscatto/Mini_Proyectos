@@ -169,7 +169,7 @@ namespace AppCodigoDeArticulos
             this.PrecioBox.BackColor = System.Drawing.SystemColors.Control;
             this.PrecioBox.Location = new System.Drawing.Point(195, 225);
             this.PrecioBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PrecioBox.MaxLength = 12;
+            this.PrecioBox.MaxLength = 10;
             this.PrecioBox.Name = "PrecioBox";
             this.PrecioBox.Size = new System.Drawing.Size(211, 22);
             this.PrecioBox.TabIndex = 4;
@@ -191,7 +191,7 @@ namespace AppCodigoDeArticulos
             // ImagenPictureBox
             // 
             this.ImagenPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ImagenPictureBox.Location = new System.Drawing.Point(416, 60);
+            this.ImagenPictureBox.Location = new System.Drawing.Point(428, 60);
             this.ImagenPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(210, 210);
@@ -207,10 +207,10 @@ namespace AppCodigoDeArticulos
             this.AgregarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AgregarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgregarBoton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AgregarBoton.Location = new System.Drawing.Point(419, 318);
+            this.AgregarBoton.Location = new System.Drawing.Point(422, 318);
             this.AgregarBoton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarBoton.Name = "AgregarBoton";
-            this.AgregarBoton.Size = new System.Drawing.Size(101, 39);
+            this.AgregarBoton.Size = new System.Drawing.Size(105, 39);
             this.AgregarBoton.TabIndex = 7;
             this.AgregarBoton.Text = "Agregar";
             this.AgregarBoton.UseVisualStyleBackColor = false;
@@ -224,10 +224,10 @@ namespace AppCodigoDeArticulos
             this.CancelarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarBoton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancelarBoton.Location = new System.Drawing.Point(525, 318);
+            this.CancelarBoton.Location = new System.Drawing.Point(541, 318);
             this.CancelarBoton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CancelarBoton.Name = "CancelarBoton";
-            this.CancelarBoton.Size = new System.Drawing.Size(101, 39);
+            this.CancelarBoton.Size = new System.Drawing.Size(105, 39);
             this.CancelarBoton.TabIndex = 8;
             this.CancelarBoton.Text = "Cancelar";
             this.CancelarBoton.UseVisualStyleBackColor = false;
@@ -271,7 +271,7 @@ namespace AppCodigoDeArticulos
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateBlue;
-            this.ClientSize = new System.Drawing.Size(631, 372);
+            this.ClientSize = new System.Drawing.Size(651, 372);
             this.Controls.Add(this.CargarPc);
             this.Controls.Add(this.MarcaCombo);
             this.Controls.Add(this.CategoriaCombo);

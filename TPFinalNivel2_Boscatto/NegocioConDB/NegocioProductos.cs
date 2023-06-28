@@ -128,7 +128,42 @@ namespace NegocioConDB
                 AccesoBaseDeDatos.CerrarConexion();
             }
         }
-
+        public void AgregarMarca(string nuevamarca)
+        {
+            AccesoCentralBD AccesoBaseDeDatos = new AccesoCentralBD();
+            try
+            {
+                AccesoBaseDeDatos.SQLquery("insert into MARCAS (Descripcion) values (@Descripcion)");
+                AccesoBaseDeDatos.SetearParametros("@Descripcion", nuevamarca); 
+                AccesoBaseDeDatos.EjecutarAccionContraBD();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                AccesoBaseDeDatos.CerrarConexion();
+            }
+        }
+        public void AgregarCategoria(string nuevaCategoria)
+        {
+            AccesoCentralBD AccesoBaseDeDatos = new AccesoCentralBD();
+            try
+            {
+                AccesoBaseDeDatos.SQLquery("insert into CATEGORIAS (Descripcion) values (@Descripcion)");
+                AccesoBaseDeDatos.SetearParametros("@Descripcion", nuevaCategoria);
+                AccesoBaseDeDatos.EjecutarAccionContraBD();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                AccesoBaseDeDatos.CerrarConexion();
+            }
+        }
         //Funcionamiento similar a Agregar solo que con la inyeccion UPDATE
         public void Modificar(Articulo Modificar)
         {

@@ -75,18 +75,18 @@ namespace AppCodigoDeArticulos
             }
 
         }
-        bool bdImagen;
         //funcion de Cargar Imagen, que ademas valida una bandera, esta para obligar a cargar una imagen valida localmente
         public void CargarImagen(string imagen)
         {
             try
             {
                 ImagenPictureBox.Load(imagen);
-                bdImagen = true;
+                ImagenPictureBox.Visible = true;
             }
             catch (Exception)
             {
-                bdImagen = false;
+                ImagenPictureBox.Load("https://w7.pngwing.com/pngs/686/439/png-transparent-computer-icons-empty-set-symbol-others-angle-triangle-logo.png");
+                //ImagenPictureBox.Visible = false;
             }
         }
 
@@ -137,7 +137,7 @@ namespace AppCodigoDeArticulos
                                 if (!(bdApoyo))
                                 {
                                     //Si existe el OpenFile y el campo no contiene http y el campo no esta vacio entra
-                                    if (cargarImagenPC != null && !(ImagenBox.Text.ToLower().Contains("http")) && ImagenBox.Text != "")
+                                    if (cargarImagenPC != null && !(ImagenBox.Text.ToLower().Contains("http")) && !(ImagenBox.Text.ToLower().Contains("data:image")) && ImagenBox.Text != "")
                                     {
                                         //Verifica la extension de la imagen y al Nuevo Nombre le asigna el horario actual.
                                             string nombreNuevoArchivo="";
@@ -166,9 +166,9 @@ namespace AppCodigoDeArticulos
                                     }
                                     //Si esta vacio pido imagen. Los auxiliares NULL son para que en el siguiente intento de agregar 
                                     //no ejecute modificar, paso varias veces jajaja.
-                                    else if (ImagenBox.Text == "" || bdImagen == false)
+                                    else if (ImagenBox.Text == "")
                                     {
-                                        MessageBox.Show("Cargue Una imagen valida porfavor");
+                                        MessageBox.Show("No deje vacio el campo Imagen Porfavor");
                                         auxiliar = null;
                                         return;
                                     }
@@ -227,14 +227,14 @@ namespace AppCodigoDeArticulos
                     auxiliar.CategoriaDelProducto = (Categoria)CategoriaCombo.SelectedItem;
                     auxiliar.MarcaDelProducto = (Marca)MarcaCombo.SelectedItem;
 
-                    if (cargarImagenPC != null && !(ImagenBox.Text.ToLower().Contains("http")) && ImagenBox.Text != "")
+                    if (cargarImagenPC != null && !(ImagenBox.Text.ToLower().Contains("http")) && !(ImagenBox.Text.ToLower().Contains("data:image")) && ImagenBox.Text != "")
                     {
                         string nombreNuevoArchivo = "";
-                        if (cargarImagenPC.FileName.Contains(".jpg"))
+                        if (cargarImagenPC.FileName.Contains(".jpg") &&  ImagenBox.Text.Contains(".jpg"))
                             nombreNuevoArchivo = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".jpg";
-                        else if (cargarImagenPC.FileName.Contains(".png"))
+                        else if (cargarImagenPC.FileName.Contains(".png") && ImagenBox.Text.Contains(".png"))
                             nombreNuevoArchivo = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
-                        else if (cargarImagenPC.FileName.Contains(".gif"))
+                        else if (cargarImagenPC.FileName.Contains(".gif") && ImagenBox.Text.Contains(".gif"))
                             nombreNuevoArchivo = DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".gif";
                         else
                         {
@@ -251,10 +251,9 @@ namespace AppCodigoDeArticulos
                         //else
                         // auxiliar.ImagenDelProducto = Path.Combine(ConfigurationManager.AppSettings["Fotos"], nombreArchivo);
                     }
-                    else if (ImagenBox.Text == "" || bdImagen == false)
+                    else if (ImagenBox.Text == "")
                     {
-                        MessageBox.Show("Cargue Una imagen valida porfavor");
-                        auxiliar = null;
+                        MessageBox.Show("No deje vacio el campo Imagen Porfavor");
                         return;
                     }
                     negocio.Modificar(auxiliar);
@@ -374,6 +373,14 @@ namespace AppCodigoDeArticulos
         private void ImagenBox_Leave(object sender, EventArgs e)
         {
             ColoreadoTextBox(ImagenBox);
+            if (ImagenBox.Text.ToLower().Contains("http") || ImagenBox.Text.ToLower().Contains("data:image"))
+            {
+                CargarImagen(ImagenBox.Text); 
+            }
+            else if (cargarImagenPC!=null)
+                ImagenPictureBox.Visible = true;
+            else
+                CargarImagen(ImagenBox.Text);
         }
 
         private void CodigoBox_TextChanged(object sender, EventArgs e)

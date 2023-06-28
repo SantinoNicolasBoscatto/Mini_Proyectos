@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace AppCodigoDeArticulos
         public Form1()
         {
             InitializeComponent();
+            ProductosPictureBox.BringToFront();
         }
         public void CargarImagen(string imagen)
         {
@@ -182,6 +184,7 @@ namespace AppCodigoDeArticulos
                 {
                     LimpiarBoton.Visible = true;
                     CriterioComboBox.Items.Clear();
+                    TextoFiltradoBox.Text = "";
                     CriterioComboBox.Items.Add("Empieza Por");
                     CriterioComboBox.Items.Add("Termina Por");
                     CriterioComboBox.Items.Add("Contiene");
@@ -190,6 +193,7 @@ namespace AppCodigoDeArticulos
                 {
                     LimpiarBoton.Visible = true;
                     CriterioComboBox.Items.Clear();
+                    TextoFiltradoBox.Text = "";
                     TextoFiltradoBox.Text = "";
                     CriterioComboBox.Items.Add("Es Mayor a");
                     CriterioComboBox.Items.Add("Es Menor a");
@@ -314,6 +318,162 @@ namespace AppCodigoDeArticulos
                 MessageBox.Show("Seleccione el campo antes porfavor");
             }
         }
+
+        //Manon de GPT para trasparentar la imagen.
+        public void TrasparentarImagen(PictureBox pictureBox, float trasparencia)
+        {
+            try
+            {
+                if (pictureBox.Image != null)
+                {
+                    // Crea una matriz de colores para aplicar la transparencia
+                    ColorMatrix colorMatrix = new ColorMatrix();
+                    colorMatrix.Matrix33 = trasparencia; // Ajusta este valor para cambiar la transparencia (0.0f a 1.0f)
+
+                    // Crea un objeto ImageAttributes y establece la matriz de colores
+                    ImageAttributes imageAttributes = new ImageAttributes();
+                    imageAttributes.SetColorMatrix(colorMatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
+
+                    // Dibuja la imagen en un nuevo bitmap utilizando las configuraciones de transparencia
+                    Bitmap transparentImage = new Bitmap(pictureBox.Image.Width, pictureBox.Image.Height);
+                    using (Graphics graphics = Graphics.FromImage(transparentImage))
+                    {
+                        graphics.DrawImage(pictureBox.Image, new Rectangle(0, 0, transparentImage.Width, transparentImage.Height),
+                            0, 0, pictureBox.Image.Width, pictureBox.Image.Height, GraphicsUnit.Pixel, imageAttributes);
+                    }
+                    pictureBox.Image = transparentImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString() + "\n\n" + "Ocurrio un error inesperado, pongase en contacto con su programador");
+            }
+
+        }
+
+        private Image original;
+        //Al entrar al PictureBox guardo el color original de la imagen y ejecuto la funcion trasparentar
+        private void ProductosPictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            original = ProductosPictureBox.Image;
+            TrasparentarImagen(ProductosPictureBox, 0.7f);
+        }
+
+        //Al salir restalezco la trasparencia del PB
+        private void ProductosPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            //ProductosPictureBox.BackColor = Color.Transparent;
+            ProductosPictureBox.Image = original;
+        }
+
+        //Decimos que si la seleccion del DGV no es nula abra una ventana nueva con la info del producto seleccionado.
+        //Para pasarle la Info del producto lo hacemos por constructor.
+        Form3 detalle=null;
+        private void ProductosPictureBox_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DgvProductos.CurrentRow != null)
+                {
+                    TrasparentarImagen(ProductosPictureBox, 0.25f);
+                    detalle = new Form3((Articulo)DgvProductos.CurrentRow.DataBoundItem);
+                    detalle.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString() + "\n\n" + "Ocurrio un error inesperado, pongase en contacto con su programador");
+            }
+        }
+
+        //Pone visible y oculta elementos
+        private void BotonMarca_Click(object sender, EventArgs e)
+        {
+            Agregar.Visible = true;
+            Cancelar.Visible = true;
+            AgregarMarcaCategoria.Visible = true;
+            AgregarMarcaCategoria.Text = "";
+            BuscarFiltradoBoton.Visible = false;
+            LimpiarBoton.Visible = false;
+            CampoComboBox.Visible = false;
+            CriterioComboBox.Visible = false;
+            TextoFiltradoBox.Visible = false;
+            MarcaLabel.Location = new Point(666, 260);
+            MarcaLabel.Visible = true;
+            label1.Visible = false;
+            CampoLabel.Visible = false;
+            CriterioLabel.Visible = false;
+            CategoriaLabel.Visible = false;
+        }
+        //Pone visible y oculta elementos
+        private void BotonCategori_Click(object sender, EventArgs e)
+        {
+            Agregar.Visible = true;
+            Cancelar.Visible = true;
+            AgregarMarcaCategoria.Visible = true;
+            AgregarMarcaCategoria.Text = "";
+            BuscarFiltradoBoton.Visible = false;
+            LimpiarBoton.Visible = false;
+            CampoComboBox.Visible = false;
+            CriterioComboBox.Visible = false;
+            TextoFiltradoBox.Visible = false;
+            CategoriaLabel.Location = new Point(657, 260);
+            CategoriaLabel.Visible = true;
+            MarcaLabel.Visible = false;
+            label1.Visible = false;
+            CampoLabel.Visible = false;
+            CriterioLabel.Visible = false;
+        }
+        //Pone visible y oculta elementos
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            reset();
+        }
+
+        //Ejecuta la funcion de agregar marca/categoria
+        private void Agregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MarcaLabel.Visible == true)
+                {
+                    NegocioProductos negocioMarca = new NegocioProductos();
+                    negocio.AgregarMarca(AgregarMarcaCategoria.Text);
+                    MessageBox.Show("Marca Agregada con exito");
+                }
+                else
+                {
+                    NegocioProductos negocioCategoria = new NegocioProductos();
+                    negocioCategoria.AgregarCategoria(AgregarMarcaCategoria.Text);
+                    MessageBox.Show("Categoria Agregada con exito");
+                }
+                reset();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString() + "\n\n" + "Ocurrio un error inesperado, pongase en contacto con su programador");
+            }
+        }
+        //Pone visible y oculta elementos
+        private void reset()
+        {
+            Agregar.Visible = false;
+            Cancelar.Visible = false;
+            AgregarMarcaCategoria.Visible = false;
+            BuscarFiltradoBoton.Visible = true;
+            CampoComboBox.Visible = true;
+            CriterioComboBox.Visible = true;
+            TextoFiltradoBox.Visible = true;
+            CategoriaLabel.Visible = false;
+            MarcaLabel.Visible = false;
+            label1.Visible = true;
+            CampoLabel.Visible = true;
+            CriterioLabel.Visible = true;
+            AgregarMarcaCategoria.Text = "";
+            if (CampoComboBox.Text != "" || TextoFiltradoBox.Text != "")
+                LimpiarBoton.Visible = true;
+        }
+
     }
     
 }
