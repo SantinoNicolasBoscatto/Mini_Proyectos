@@ -1,0 +1,264 @@
+html{
+  scroll-behavior: smooth;
+}
+
+/* Configuracion de la barra */
+.Nav__Bar{
+    background-color: #111;
+    width: 100%;
+    height: 18%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    /* opacity: 0; */
+}
+/* Logo de la barra */
+.Nav__Bar img{
+    width: 20%;
+    box-sizing: content-box;
+    padding-left: 15px;
+    object-fit: cover;
+    transition:  transform 1.5s ease-in;
+}
+/* Logo de la barra */
+.Nav__Bar img:hover{
+    transform: scale(1.1) translateY(5px) translateX(-5px);
+}
+
+/* ShortCuts del menu */
+.Nav__Bar a{
+    text-decoration: none;
+    padding: 30px 8px;
+    font-size: 25px;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: font-size 2s ease-in-out;
+    color: aliceblue;
+    font-family:'Work Sans', sans-serif;
+}
+/* ShortCuts del menu */
+.Nav__Bar a:hover{
+    font-size: 35px;
+    animation: color-change 5s infinite;
+}
+   /* Tapa de imagen */
+#Principal{
+  position: relative;
+  top: 60px;
+  animation: back-change 5s infinite;
+  }
+  
+/* Seccion Quienes somos */
+.article-nosotros{
+  margin-top: 50px;
+  position: relative;
+  background-image: linear-gradient(rgba(50,50,50,0.8), rgba(60,60,60, 0.8)), url(https://www.cepmaude.com/wp-content/uploads/2017/08/reparacion_impresoras.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: #000000;
+  text-align: center;
+  background-attachment: fixed;
+}
+/* Titulo Quienes somos */
+.article-nosotros__h2{
+  font-size: 80px;
+  letter-spacing: 5px;
+  padding-top: 10px;
+  animation: color-change 5s infinite;
+  font-family: 'REM', sans-serif;
+  user-select: none;
+}
+/* Parrafos Quienes somos */
+.article-nosotros__p{
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  text-align: justify;
+  padding-top: 24px;
+  padding-left: 75px;
+  padding-right: 65px;
+  padding-bottom: 28px;
+  font-size: 27px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#Servicios{
+  height: 100vh;
+  background-image: linear-gradient(rgba(30,30,30,0.8), rgba(60,60,60, 0.7)),url(img/Local.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Servicios__Div{
+  display: grid;
+  text-align: center;
+  grid-template-columns: MinMax(100px, 1fr) MinMax(300px, 1fr);
+  grid-template-rows:    50px MinMax(300px, 1fr);
+  row-gap: 15px;
+}
+
+.Servi-Titulo{
+      text-align: center;
+      user-select: none;
+      animation: color-change 5s infinite;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      font-size: 80px;
+      letter-spacing: 3px;
+      font-family: 'REM', serif;
+}
+
+.Servicios__Div h3{
+  color: #ca043f ;
+  user-select: none;
+  font-size: 40px;
+  font-family: 'Lora', serif;
+}
+
+.Servicios__Div--Ul{
+  font-family: 'REM', serif;
+  font-size: 19px;
+  text-align: justify;
+  line-height: 2;
+  color: #e477ea;
+  padding: 5px 50px;
+  list-style: circle;
+}
+
+.Servicios__Div--Ul li{
+  cursor: pointer;
+  transition: font-size .7s;
+}
+
+li{
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.Servicios__Div--Ul li:hover{
+    font-size: 23px;
+    animation: color-Servi infinite 2s;
+}
+
+#Productos{
+    height: 105vh;
+    background-image: url(img/Grey.jpg);
+    background-size: cover;
+}
+
+#Productos h2{
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-align: center;
+  animation: color-change 5s infinite;
+  font-family: 'REM', sans-serif;
+  user-select: none;
+}
+
+.Flex__Productos{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Flex__Titulos{
+  display: flex;
+  justify-content: space-around;
+  font-size: 38px;
+  text-align: center;
+  position: relative;
+  left: -3px;
+  padding: 20px 0;
+  color: #e31b4d;
+}
+
+.Flex__Titulos h3:hover{
+  animation: color-Productos 2s infinite;
+}
+
+.Productos__Div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 33%;
+  height: 72vh;
+}
+
+.Productos__Div .card{
+  width: 46%;
+  height: 30vh;
+  border-radius: 12px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  overflow: hidden; 
+  text-align: center;
+  transition: border-radius 2s ease-in-out, background-color 2s ease-in-out, transform 2s ease-out;
+  cursor: pointer;
+}
+
+.Productos__Div .card:hover{
+  transform: translateY(-15px);
+  border-radius: 30px;
+}
+
+.Repuestos .card {
+  margin: 0 8px;
+  background-color: #8ac4d2;
+}
+
+.Repuestos .card:hover {
+  margin: 0 8px;
+  background-color: #46a2b9;
+}
+.Impresora .card {
+  margin: 0 8px;
+  background-color: #f49ac2;
+}
+.Impresora .card:hover {
+  margin: 0 8px;
+  background-color: #dd5b95;
+}
+.Tintas .card {
+  margin: 0 8px;
+  background-color: #d6ce7b;
+}
+.Tintas .card:hover {
+  margin: 0 8px;
+  background-color: #f8ea49;
+}
+.Productos__Div .card img{
+    width: 90%;
+    height: 75%;
+    padding-top: 15px;
+    border-radius: 50px;
+}
+
+
+@keyframes back-change {
+  0% { background-color: #b61414; }
+  25% { background-color: magenta; }
+  50% { background-color: rgb(23, 223, 223); }
+  75% { background-color: yellow; }
+  100% { background-color: rgb(198, 13, 13); }
+} 
+@keyframes color-change {
+  0% { color: #b61414; }
+  25% { color: magenta; }
+  50% { color: rgb(23, 223, 223); }
+  75% { color: yellow; }
+  100% { color: rgb(198, 13, 13); }
+} 
+@keyframes color-Servi {
+  0% { color: #e477ea; }
+  25% { color: rgb(245, 86, 245); }
+  50% { color: rgb(247, 50, 247); }
+  75% { color: rgb(245, 86, 245); }
+  100% { color: #e477ea; }
+} 
+@keyframes color-Productos {
+  0% { color: #e31b4d; }
+  25% { color: #bc1841; }
+  50% { color: #b1032e; }
+  75% { color: #d10639; }
+  100% { color: #e31b4d; }
+} 

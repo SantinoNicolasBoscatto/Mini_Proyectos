@@ -552,13 +552,27 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        signo = '+';
-                        resultado = 0;
-                        check = false;
-                        numeroX = int.Parse(VisorCalculadora.Text);
-                        VisorCalculadora.Text = "3";
-                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        try
+                        {
+                            signo = '+';
+                            resultado = 0;
+                            check = false;
+                            numeroX = int.Parse(VisorCalculadora.Text);
+                            VisorCalculadora.Text = "3";
+                            Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Error Inesperado");
+                        }
+
                     }
+
+                }
+                else
+                {
+                    VisorCalculadora.Text = "3";
+                    numeroX = int.Parse(VisorCalculadora.Text);
                 }
             }
             else
@@ -770,6 +784,43 @@ namespace WindowsFormsApp1
                 VisorCalculadora.Text += "9";
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (VisorCalculadora.Text == "" || VisorCalculadora.Text == "0")
+            {
+                if (check)
+                {
+                    if (!bd2)
+                    {
+                        resultado = 0;
+                        check = false;
+                        VisorCalculadora.Text = "0";
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                    }
+                    else
+                    {
+                        signo = '+';
+                        resultado = 0;
+                        check = false;
+                        numeroX = int.Parse(VisorCalculadora.Text);
+                        VisorCalculadora.Text = "0";
+                        Operacion(signo, ref resultado, ref numeroX, ref bd2);
+                    }
+                }
+                else
+                {
+                    VisorCalculadora.Text = "0";
+                    numeroX = int.Parse(VisorCalculadora.Text);
+                }
+
+            }
+            else
+            {
+                VisorCalculadora.Text += "0";
+            }
+        }
+
         private void Form1_Shown(object sender, EventArgs e)
         {
             VisorCalculadora.Focus();

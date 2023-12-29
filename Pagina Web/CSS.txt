@@ -1,0 +1,105 @@
+<article>
+        <div class="ContainerGrid">
+            <div class="card">
+                <img src="./img/ae86.jpg" alt="">
+                <div class="Hola">
+                    <b><center>Toyota Ae86 Sprinter Trueno</center></b>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/BMW-M3.jpg" alt="">
+                <h3>BMW M3</h3>
+            </div>
+            <div class="card">
+                <img src="./img/BMW-M3.jpg" alt="">
+                <h3>BMW M3</h3>
+            </div>
+            <div class="card">
+                <img src="./img/BMW-M3.jpg" alt="">
+                <h3>BMW M3</h3>
+            </div>
+        </div>
+        
+    </article>
+
+CCSS
+
+/* .card {
+    width: 420px;
+    height: 200px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    justify-content: left;
+  }
+  
+  .card img {
+    z-index: 1;
+    color: red;
+    width: 67%;
+    height: 93%;
+    position: relative;
+    object-fit: cover;
+    margin-top: 0px;
+    border-radius: 20px;
+  }
+
+  .card h3
+  {
+    z-index: 1;
+    color: red;
+    position: relative;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    background-image: linear-gradient(180deg, rgb(99, 25, 27), rgb(166, 31, 164));
+    height: 150%;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #1d1b1b;
+    ;
+    inset: 8px;
+    border-radius: 10px;
+  }  
+
+  .ContainerGrid{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, minmax(425px, 1fr)); /* Esto crea columnas automáticas */
+  /*   grid-template-rows: repeat(10, minmax(225px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.Hola{
+    width: 33%;
+    height: 100%;
+    margin-left: 4px;
+    z-index: 2;
+    background-color: rgb(89, 88, 89);
+    border-radius: 5px;
+}  */

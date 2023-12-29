@@ -45,6 +45,7 @@ namespace WindowsFormsApp1
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Division
@@ -137,14 +138,14 @@ namespace WindowsFormsApp1
             this.VisorCalculadora.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.VisorCalculadora.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.VisorCalculadora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.VisorCalculadora.Location = new System.Drawing.Point(6, 23);
+            this.VisorCalculadora.Location = new System.Drawing.Point(6, 26);
             this.VisorCalculadora.Margin = new System.Windows.Forms.Padding(0);
             this.VisorCalculadora.MaxLength = 15;
             this.VisorCalculadora.Name = "VisorCalculadora";
             this.VisorCalculadora.ReadOnly = true;
             this.VisorCalculadora.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.VisorCalculadora.ShowSelectionMargin = true;
-            this.VisorCalculadora.Size = new System.Drawing.Size(558, 66);
+            this.VisorCalculadora.Size = new System.Drawing.Size(558, 69);
             this.VisorCalculadora.TabIndex = 5;
             this.VisorCalculadora.Text = "0";
             this.VisorCalculadora.TextChanged += new System.EventHandler(this.VisorCalculadora_TextChanged);
@@ -330,12 +331,31 @@ namespace WindowsFormsApp1
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Purple;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button10.FlatAppearance.BorderSize = 5;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button10.Location = new System.Drawing.Point(35, 421);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(205, 60);
+            this.button10.TabIndex = 16;
+            this.button10.Text = "0";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(569, 436);
+            this.ClientSize = new System.Drawing.Size(569, 485);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -381,6 +401,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 
