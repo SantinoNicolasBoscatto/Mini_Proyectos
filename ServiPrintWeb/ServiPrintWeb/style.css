@@ -1,0 +1,198 @@
+#BarraPc{
+    width: 110%;
+    height: 7em;
+    background-color: rgb(48, 44, 44);
+    position: fixed;
+    margin-top: -1em;
+}
+
+.BarraCelular{
+    display: none;
+}
+
+#Inicio{
+    margin-top: 3em;
+    animation: back-change 5s infinite;
+}
+@keyframes back-change {
+    0% { background-color: #b61414; }
+    25% { background-color: magenta; }
+    50% { background-color: rgb(23, 223, 223); }
+    75% { background-color: yellow; }
+    100% { background-color: rgb(198, 13, 13); }
+  }
+
+#Logo{
+    width: 13em;
+    object-fit: contain;
+    position: absolute;
+    left: -5px;
+    top: 20%;
+    transition: all 1s;
+}
+
+#Logo:hover{
+    top: 15%;
+    width: 16em;
+}
+
+a{
+    text-decoration: none;
+    font-family:'Work Sans', sans-serif;
+    color: #fff;
+    font-size: 1.75em;
+    padding: 0px 1.5em;
+    transition: all 0.5s;
+}
+
+a:hover
+{
+    font-size: 2em;
+    animation: color-change 5s infinite;
+}
+@keyframes color-change {
+    0% { color: #b61414; }
+    25% { color: magenta; }
+    50% { color: rgb(23, 223, 223); }
+    75% { color: yellow; }
+    100% { color: rgb(198, 13, 13); }
+  }
+
+
+.Acortadores{
+    position: relative;
+    top: 3.2em;
+    display: flex;
+    justify-content: center;   
+}
+
+
+.Grid__Container{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 4, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    border: 10px solid rgba(255, 0, 0, 0.453);
+    background-color: #373737;
+    justify-items: center;
+    align-items: center;
+    row-gap: 15px;
+    column-gap: 15px;
+    padding: 10px;
+    grid-auto-flow: dense;
+}
+
+ img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+} 
+
+.Grid__Container :nth-child(4){
+    grid-column: 1 / 3;
+}
+
+.Grid__Container :nth-child(5){
+    object-fit: fill;
+}
+
+.Grid__Container :nth-child(9){
+    grid-row: 4 / span 2;
+    grid-column: 1 / span 3;
+}
+
+img:hover{
+    width: 95%;
+    height: 95%;
+}
+
+@media only screen and  (max-width: 991px)
+{
+    #Logo, .Acortadores, #BarraPc{
+        display: none;
+    }
+    #BarraCelular{
+        width: 110%;
+        height: 3em;
+        background-color: rgb(255, 0, 0);
+        position: fixed;
+        margin-top: -3em;
+    }
+    .Acortadores__BarraCelular{
+        display: none;
+        margin: 0 auto;
+        min-width: 350px;      
+    }
+
+    #Casa:hover > .Acortadores__BarraCelular{
+        display: block;
+        position: fixed;
+        top: 45px;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        margin-left: -8px;
+        animation: agrandarFondo 1.3s forwards;
+    }
+    @keyframes agrandarFondo{
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 100vh;
+        }
+    }
+        
+    
+    #Casa{
+        font-size: 27px;
+        position: relative;
+        top: 10px;
+        padding: 0 8px;
+    }
+    .Texto{
+        position: relative;
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+    #Inicio{
+        margin-top: 45px;
+    }
+}
+
+@media only screen and  (max-width: 1200px)
+{
+    a{
+        text-decoration: none;
+        font-family:'Work Sans', sans-serif;
+        color: #fafafa;
+        font-size: 1.45em;
+        padding: 0px 1.4em;
+        transition: all 0.5s;
+    }
+    a:hover
+    {
+    font-size: 1.7em;
+    animation: color-change 5s infinite;
+    }   
+    .Acortadores{
+        position: relative;
+        top: 3.5em;
+        left: 2em;
+        display: flex;
+        justify-content: center;
+    }
+    #Logo{
+        width: 12.5em;
+        object-fit: contain;
+        position: absolute;
+        left: -10px;
+        top: 22%;
+        transition: all 1s;
+    }
+    
+    #Logo:hover{
+        top: 25%;
+        width: 14em;
+    }
+}
