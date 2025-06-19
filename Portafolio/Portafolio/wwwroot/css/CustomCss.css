@@ -1,0 +1,21 @@
+﻿
+.MyPic{
+    width: 75%;
+}
+
+.SobreMi{
+    font-family: Arial;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+@media (max-width: 1190px) and (min-width: 992px) {
+    .MyPic {
+        width: 85%;
+    }
+}
+@media (max-width: 992px) {
+    .MyPic {
+        width: 60%;
+    }
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeliculasAPI", "PeliculasAPI\PeliculasAPI.csproj", "{A3309296-CD81-4151-AD9D-4096620CE1CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeliculasAPITest", "PeliculasAPITest\PeliculasAPITest.csproj", "{7EEA73DE-B3BD-42FF-B2B9-A4C95E77FE54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3309296-CD81-4151-AD9D-4096620CE1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3309296-CD81-4151-AD9D-4096620CE1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3309296-CD81-4151-AD9D-4096620CE1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3309296-CD81-4151-AD9D-4096620CE1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EEA73DE-B3BD-42FF-B2B9-A4C95E77FE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EEA73DE-B3BD-42FF-B2B9-A4C95E77FE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EEA73DE-B3BD-42FF-B2B9-A4C95E77FE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EEA73DE-B3BD-42FF-B2B9-A4C95E77FE54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28EB9E68-E9E5-4B55-A6D2-E6DA5D1213B6}
+	EndGlobalSection
+EndGlobal

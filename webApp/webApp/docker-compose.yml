@@ -1,0 +1,11 @@
+version: "3.9"
+services: # => Definiré los contenedores que quiero crear
+  web-app:
+    build: . # => Busca el Dockerfile para construir la imagen
+    ports: 
+      - "8080:8080" # => Define los puertos del contenedor
+    volumes: # Aquí referencio qué volúmenes usa este contenedor
+      - mongo-data:/data/db # Define la ruta donde se guarda la data
+
+volumes: # Definiré los volúmenes aquí
+  mongo-data: # Coloco el nombre del volumen

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapping PuppeteerSharp", "WebScrapping PuppeteerSharp\WebScrapping PuppeteerSharp.csproj", "{C0B8E137-5F57-48EA-86D6-02D8F5DB9340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapping Selenium", "WebScrapping Selenium\WebScrapping Selenium.csproj", "{9840CCF1-67C8-45A5-BAA3-3606F3F09A29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0B8E137-5F57-48EA-86D6-02D8F5DB9340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B8E137-5F57-48EA-86D6-02D8F5DB9340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B8E137-5F57-48EA-86D6-02D8F5DB9340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B8E137-5F57-48EA-86D6-02D8F5DB9340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9840CCF1-67C8-45A5-BAA3-3606F3F09A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9840CCF1-67C8-45A5-BAA3-3606F3F09A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9840CCF1-67C8-45A5-BAA3-3606F3F09A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9840CCF1-67C8-45A5-BAA3-3606F3F09A29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

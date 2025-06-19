@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService1";
+
+package beers;
+
+service Beers {
+  rpc GetBeers (BeersRequest) returns (BeersReply);
+}
+
+message BeersRequest {}
+
+message BeersReply {
+  repeated string beers = 1;
+}

@@ -1,0 +1,1668 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PaginaAutos.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<body id="BackGround">
+    <header>
+        <img class="DealerIcon" src="img/Dealer.png" alt="">
+        <div class="clock">
+            <span class="clock-time"></span>
+            <span class="clock-ampm"></span>
+            <script src="./css/main.js"></script>
+            <audio id="myAudio">
+                <source src="Audios/Check.wav" type="audio/wav">
+                Tu navegador no admite la reproducción de audio.
+            </audio>
+          </div>
+    </header>
+    <article class="Grid-Container">
+        <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <!-- MARCA Uno  -->
+          <div class="card">
+            <div class="card-front">
+              <p class="title"  runat="server" id="Nombre1">Alpine A110</p>
+              <img src="img/A110.jpg" alt="" runat="server" id="ImagenVenta1">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text"  runat="server" id="HorsePower1">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso1">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia1">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion1">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque1">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion1">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed1">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca1">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio1">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button" id="boton2">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre2">Fiat Abarth Ultimate Edition 2015</p>
+              <img src="img/Abarth.jpg" alt="" runat="server" id="ImagenVenta2">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower2">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso2">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia2">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion2">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque2">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion2">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed2">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca2">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio2">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre3">Alfa Giulia 2017</p>
+              <img src="img/AlfaGuilia.jpg" alt="" runat="server" id="ImagenVenta3">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower3">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso3">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia3">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" runat="server" id="Traccion3">
+                  <p class="text Max">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque3">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion3">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed3">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca3">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio3">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre4">A110 2020</p>
+              <img src="img/AlpineA110.jpg" alt="" runat="server" id="ImagenVenta4">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower4">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso4">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia4">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion4">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque4">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion4">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed4">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca4">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio4">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre5">Mercedes AMG GTR Lewis Special Edition '17</p>
+              <img src="img/AMGGTR.jpg" alt="" runat="server" id="ImagenVenta5">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower5">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso5">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia5">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion5">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque5">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion5">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed5">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca5">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio5">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre6">Ferrari Testarrosa 1983</p>
+              <img src="img/Ferrari_Testarossa_.jpg" alt="" runat="server" id="ImagenVenta6">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower6">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso6">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia6">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion6">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque6">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion6">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed6">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca6">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio6">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre7">Audi TTS 2009</p>
+              <img src="img/AudiTTS.jpg" alt="" runat="server" id="ImagenVenta7">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower7">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso7">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia7">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion7">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque7">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion7">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed7">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca7">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio7">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre8">BMW M3 1993 GTS</p>
+              <img src="img/BMW-M3.jpg" alt="" runat="server" id="ImagenVenta8">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower8">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso8">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia8">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion8">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque8">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion8">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed8">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca8">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio8">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre9">Delorean DMC Re-Version '04</p>
+              <img src="img/DMC.jpg" alt="" runat="server" id="ImagenVenta9">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower9">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso9">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia9">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="">
+                  <p class="text Max" runat="server" id="Traccion9">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque9">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion9">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed9">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca9">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio9">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre10">Chevy Camaro</p>
+              <img src="img/ChevyCamaro.jpg" alt="" runat="server" id="ImagenVenta10">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower10">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso10">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia10">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion10">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque10">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion10">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed10">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca10">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio10">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre11">Dahitsu Coupe</p>
+              <img src="img/DahitsuCoupe.jpg" alt="" runat="server" id="ImagenVenta11">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower11">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso11">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia11">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion11">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque11">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion11">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed11">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca11">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio11">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre12">Dodge Viper</p>
+              <img src="img/Viper.jpg" alt="" runat="server" id="ImagenVenta12">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower12">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso12">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia12">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion12">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque12">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion12">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed12">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca12">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio12">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre13">Auto Bianchi Abarth '79</p>
+              <img src="img/AutoBianchi.jpg" alt="" runat="server" id="ImagenVenta13">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower13">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso13">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia13">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion13">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque13">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion13">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed13">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca13">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio13">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre14">Aston Martin Fernando Alonso Sub-World-Champion 2026</p>
+              <img src="img/AstonV8.jpg" alt="" runat="server" id="ImagenVenta14">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower14">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso14">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia14">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion14">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque14">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion14">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed14">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca14">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio14">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre15">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta15">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower15">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso15">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia15">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion15">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque15">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion15">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed15">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca15">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio15">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre16">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta16">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower16">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso16">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia16">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion16">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque16">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion16">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed16">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca16">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio16">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre17">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta17">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower17">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso17">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia17">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion17">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque17">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion17">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed17">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca17">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio17">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre18">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta18">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower18">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso18">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia18">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion18">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque18">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion18">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed18">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca18">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio18">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre19">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta19">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower19">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso19">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia19">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion19">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque19">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion19">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed19">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca19">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio19">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre20">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta20">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower20">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso20">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia20">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion20">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque20">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion20">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed20">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca20">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio20">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre21">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta21">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower21">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso21">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia21">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion21">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque21">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion21">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed21">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca21">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio21">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre22">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta22">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower22">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso22">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia22">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion22">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque22">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion22">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed22">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca22">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio22">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre23">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta23">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower23">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso23">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia23">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion23">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque23">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion23">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed23">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca23">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio23">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre24">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta24">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower24">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso24">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia24">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion24">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque24">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion24">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed24">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca24">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio24">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre25">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta25">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower25">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso25">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia25">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion25">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque25">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion25">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed25">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" >
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio25">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre26">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta26">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower26">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso26">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia26">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion26">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque26">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion26">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed26">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca26">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio26">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre27">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta27">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower27">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso27">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia27">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion27">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque27">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion27">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed27">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca27">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio27">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre28">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta28">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower28">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso28">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia28">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion28">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque28">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion28">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed28">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca28">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio28">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title" runat="server" id="Nombre29">AE86 3 Door Sprinter Trueno 1983</p>
+              <img src="img/ae86.jpg" alt="" runat="server" id="ImagenVenta29">
+            </div>
+            <div class="card-back">
+              <div class="GridBack">
+                <div class="miniGrid">
+                    <img src="icons/HP.png" alt="" >
+                    <p class="text" runat="server" id="HorsePower29">240 HP</p>
+                </div>
+                <div class="miniGrid">
+                  <p class="text" runat="server" id="Peso29">2540 Kg</p>
+                  <img src="icons/KG.png" alt="" > 
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/PesoPotencia.png" alt="" >
+                  <p class="text Num" runat="server" id="PesoPotencia29">15.66</p>
+                  <p class="text Pos"> Kg/Hp</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Traccion.png" alt="" >
+                  <p class="text Max" runat="server" id="Traccion29">RWD</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Torque.png" alt="" >
+                  <p class="textDos Min" runat="server" id="Torque29">1999 Nm</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Aspiracion.png" alt="" >
+                  <p class="textDos Max" runat="server" id="Aspiracion29">NA</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/TopSpeed.png" alt="" >
+                  <p class="textDos Num2" runat="server" id="TopSpeed29">210</p>
+                  <p class="textDos Pos2">Km/h</p>
+                </div>
+                <div class="miniGrid">
+                  <img src="icons/Toyota.png" alt="" runat="server" id="Marca29">
+                  <p class="textDos">Japan</p>
+                </div>
+              </div>
+              <div class="Flex">
+                <div class="FlexText">
+                  <p class="Precio" runat="server" id="Precio29">$999.999</p>
+                </div>
+                <button data-text="Awesome" class="button">
+                  <span class="actual-text">&nbsp;BUY&nbsp;</span>
+                  <span class="hover-text" aria-hidden="true">&nbsp;BUY&nbsp;</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <!-- MARCA Dos  -->
+    </article>
+        <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

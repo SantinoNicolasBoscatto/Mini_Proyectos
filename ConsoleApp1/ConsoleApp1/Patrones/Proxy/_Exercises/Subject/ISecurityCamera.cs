@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1.Patrones.Proxy._Exercises.Subject
+{
+    public interface ISecurityCamera
+    {
+        void DisplayCamera(int camera);
+    }
+    // Solo se aplica en este ejemplo para simular una lista
+    public enum CameraNumbers
+    {
+        Comedor = 1,
+        Cocina = 2, 
+        Frente = 3,
+        Patio = 4,
+        Habitacion = 5
+    }
+}

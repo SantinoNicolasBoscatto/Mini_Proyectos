@@ -1,0 +1,278 @@
+﻿body{
+    scroll-behavior: smooth;
+    background-color: #1c1b1b;
+    overflow-x: hidden;
+}
+#FotoID {
+    border-radius: 50%;
+    margin-left: -18%;
+    margin-top: 7%;
+}
+
+.Presentacion {
+    position: relative;
+    background-image: url('https://assets-global.website-files.com/6152d7874f8c968f84305aec/64b0088645743b074cd1a4e9_Top%20C%20Sharp%20Interview%20Questions%20and%20Answers.jpg');
+    background-color: rgba(128, 128, 128, 0.5);
+    background-size: cover;
+    background-position: center;
+    height: 92vh;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    z-index: 100;
+    background-attachment: fixed;
+    top: 55px;
+}
+
+.GreyBack {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.72);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.GreyBack img{
+    border-radius: 50%;
+    filter: Contrast(111%);
+    filter: drop-shadow(0px 0px 15px #00ffd068);
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.GreyBack h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 65px;
+    color: rgb(173, 165, 165);
+    right: 3.5%;
+    top: 6vh;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 12%;
+}
+
+.GreyBack p{
+    font-size: 22px;
+}
+
+
+@media  (min-width: 992px) and (max-width: 1300px) {
+    .GreyBack p{
+        font-size: 19px;
+    }
+
+    .GreyBack h1{
+        font-size: 55px;
+    }
+
+    
+    #FotoID {
+    border-radius: 50%;
+    margin-left: -3%;
+    margin-top: 7%;
+    width: 425px;
+    }
+}
+@media (min-width: 850px) and (max-width: 992px) {
+    #FotoID {
+        margin-top: 15vh;
+        width: 380px;
+    }
+
+    .GreyBack h1{
+        font-size: 45px;
+        top: 10vh;
+        margin-bottom: 12vh;
+        left: 55px;
+    }
+    
+    .GreyBack p{
+        font-size: 16px;
+        position: relative;
+        left: 55px;
+    }
+}
+@media (min-width: 769px) and (max-width: 850px) {
+    #FotoID {
+        margin-top: 15vh;
+        width: 380px;
+        margin-left: 5%;
+    }
+
+    .GreyBack h1{
+        font-size: 45px;
+        top: 10vh;
+        margin-bottom: 10vh;
+        left: 20px;
+    }
+    
+    .GreyBack p{
+        font-size: 16px;
+        position: relative;
+        left: 20px;
+    }
+}
+@media (min-width: 691px) and (max-width: 769px) {
+    #FotoID {
+        border-radius: 50%;
+        margin-top: 20vh;
+        width: 300px;
+        margin-left: -20%;
+    }
+
+    .GreyBack h1{
+        font-size: 45px;
+        top: 8vh;
+        margin-bottom: 9.5vh;
+        left: 48px;
+    }
+
+    .GreyBack p{
+        font-size: 15px;
+        position: relative;
+        left: 25px;
+        width: 300px;
+        }
+    .Presentacion{
+        height: 91vh;
+    }
+
+    .col{
+        width: 5px;
+    }
+}
+@media (min-width: 612px) and (max-width: 691px) {
+    #FotoID {
+        border-radius: 50%;
+        margin-top: 20vh;
+        width: 300px;
+        margin-left: -17%;
+    }
+
+    .GreyBack h1{
+        font-size: 45px;
+        top: 8vh;
+        margin-bottom: 9.5vh;
+        left: 25px;
+    }
+
+    .GreyBack p{
+        font-size: 15px;
+        position: relative;
+        width: 270px;
+        left: 15px;
+        }
+    .Presentacion{
+        height: 91vh;
+    }
+
+    .col{
+        width: 5px;
+    }
+}
+@media (min-width: 499px) and (max-width: 612px) {
+    .Presentacion{
+        height: 92vh;
+    }
+    #FotoID {
+        margin-top: 25vh;
+        width: 220px;
+        margin-left: 1%;
+    }
+
+    .GreyBack h1{
+        font-size: 36px;
+        top: 8vh;
+        margin-bottom: 9.5vh;
+        left: 5px;
+    }
+    
+    .GreyBack p{
+        font-size: 15px;
+        position: relative;
+    }
+}
+@media (min-width: 456px) and (max-width: 499px) {
+    .Presentacion{
+        height: 100vh;
+    }
+    .aux{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    #FotoID {
+        
+        width: 220px;
+        margin:auto;
+        position: relative;
+        margin-top: 3vh;
+    }
+
+    .GreyBack h1{
+        font-size: 36px;
+        top: 5vh;
+        margin-bottom: 7vh;
+        left: 5px;
+    }
+    
+    .GreyBack p{
+        font-size: 15px;
+        position: relative;
+    }
+}
+@media (min-width: 360px) and (max-width: 456px){
+    .GreyBack h1{
+        font-size: 32px;
+        top: 5vh;
+        margin-bottom: 7vh;
+        left: 5px;
+    }
+    .aux{
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 0;
+    }
+    .GreyBack p{
+        font-size: 14px;
+        position: relative;
+    }
+
+    #FotoID {
+        margin-top: 5vh;
+        width: 220px;
+        margin-left: 1%;
+
+    }    
+
+    .Presentacion{
+       height: 100vh; 
+    }
+}
+@media (min-width: 290px) and (max-width: 360px){
+    .GreyBack h1{
+        font-size: 32px;
+        top: 5vh;
+        margin-bottom: 7vh;
+        left: 5px;
+    }
+    
+    .GreyBack p{
+        font-size: 14px;
+        position: relative;
+    }
+
+    #FotoID {
+        margin-top: 5vh;
+        width: 220px;
+        margin-left: 1%;
+
+    }    
+
+    .Presentacion{
+        height: 107vh;
+    }
+}

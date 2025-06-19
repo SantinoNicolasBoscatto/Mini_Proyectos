@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{67BA3C61-454B-4547-812C-529EBF4004E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{F0EA1622-2108-4336-9DE7-DF44C4578160}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7030918D-CCD6-4D0E-A9BD-750AE496200C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E7B2C3F7-C23A-479C-B829-894CCB836771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDesignPlus.EFCore", "src\CodeDesignPlus.EFCore\CodeDesignPlus.EFCore.csproj", "{3DF23351-B3F5-4886-8ED3-66D07D3C31B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDesignPlus.EFCore.Test", "tests\CodeDesignPlus.EFCore.Test\CodeDesignPlus.EFCore.Test.csproj", "{99D248F5-6F67-458B-83D1-14F8A7D71957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDesignPlus.Entities", "tests\CodeDesignPlus.Entities\CodeDesignPlus.Entities.csproj", "{70461804-DB4B-44D1-8E1F-0FF0BDFA2C26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDesignPlus.Abstractions", "CodeDesignPlus.Abstractions\CodeDesignPlus.Abstractions.csproj", "{BFEB658B-2020-4ADA-B28A-709C596F5AFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDesignPlus.InMemory", "tests\CodeDesignPlus.InMemory\CodeDesignPlus.InMemory.csproj", "{2EA0782E-415E-4EA3-A9D0-A757B25DD14E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DF23351-B3F5-4886-8ED3-66D07D3C31B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF23351-B3F5-4886-8ED3-66D07D3C31B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF23351-B3F5-4886-8ED3-66D07D3C31B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF23351-B3F5-4886-8ED3-66D07D3C31B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D248F5-6F67-458B-83D1-14F8A7D71957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D248F5-6F67-458B-83D1-14F8A7D71957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D248F5-6F67-458B-83D1-14F8A7D71957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D248F5-6F67-458B-83D1-14F8A7D71957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70461804-DB4B-44D1-8E1F-0FF0BDFA2C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70461804-DB4B-44D1-8E1F-0FF0BDFA2C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70461804-DB4B-44D1-8E1F-0FF0BDFA2C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70461804-DB4B-44D1-8E1F-0FF0BDFA2C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEB658B-2020-4ADA-B28A-709C596F5AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFEB658B-2020-4ADA-B28A-709C596F5AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFEB658B-2020-4ADA-B28A-709C596F5AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEB658B-2020-4ADA-B28A-709C596F5AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA0782E-415E-4EA3-A9D0-A757B25DD14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA0782E-415E-4EA3-A9D0-A757B25DD14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA0782E-415E-4EA3-A9D0-A757B25DD14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA0782E-415E-4EA3-A9D0-A757B25DD14E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DF23351-B3F5-4886-8ED3-66D07D3C31B0} = {7030918D-CCD6-4D0E-A9BD-750AE496200C}
+		{99D248F5-6F67-458B-83D1-14F8A7D71957} = {E7B2C3F7-C23A-479C-B829-894CCB836771}
+		{70461804-DB4B-44D1-8E1F-0FF0BDFA2C26} = {E7B2C3F7-C23A-479C-B829-894CCB836771}
+		{BFEB658B-2020-4ADA-B28A-709C596F5AFC} = {E7B2C3F7-C23A-479C-B829-894CCB836771}
+		{2EA0782E-415E-4EA3-A9D0-A757B25DD14E} = {E7B2C3F7-C23A-479C-B829-894CCB836771}
+	EndGlobalSection
+EndGlobal

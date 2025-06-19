@@ -1,0 +1,818 @@
+.MisProyectos{
+    height: 160vh;
+    top: -55px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-geometrico-plano_79603-1643.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699574400&semt=ais');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.container2 {
+    width: 355px;
+    height: 300px;
+    perspective: 900px;
+}
+.Fondo-Trasparente .row{
+  margin-bottom: 20vh;
+} 
+  .card2 {
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    border-radius: 2rem;
+    z-index: 100;
+  }
+  
+  .container2:hover > .card2 {
+    cursor: pointer;
+    transform: rotateX(180deg) scale(1.05);
+  }
+
+  .container2:hover > .right {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg) scale(1.05) translateX(-75px);
+  }
+
+  .container2:hover > .Left {
+    cursor: pointer;
+    transform: rotateY(-180deg) rotateZ(-180deg) scale(1.05) translateX(75px);
+    z-index: 9999;
+  }
+  
+  .front2, .back2 {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    box-shadow: 0 0 10px 2px rgba(50, 50, 50, 2.5);
+    backface-visibility: hidden;
+    color: aliceblue;
+    background: linear-gradient(-120deg, 
+  #757071, #2e2139);
+  }
+  
+  .front2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .back2 {
+    transform: rotateY(180deg) rotateZ(180deg);
+    padding: 15px;
+  }
+
+  .back2 p{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    margin-top: -5px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  .back2 ul{
+    position: relative;
+    display:block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    left: 8px;
+    list-style-type: circle; /* Establece el tipo de marcador de lista como un círculo. Puedes cambiarlo según tus preferencias. */
+    padding-left: 15px;
+    font-size: 14px;
+    list-style-position: outside;
+  }
+
+  .front2 img{
+    width: 340px;
+    height: 225px;
+    border-radius: 2rem;
+    position: relative;
+    margin-top: 28px;
+  }
+
+  .front2 h3{
+    position: absolute;
+    top: 5px;
+    letter-spacing: 3px;
+    font-size: 27px;
+  }
+  
+  .back-heading2, .front-heading2 {
+    font-size: 28px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+  }
+
+  .Fondo-Trasparente h2{
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+
+  .Fondo-Trasparente{
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    top: 50px;
+    left: 0;
+    z-index: 0;
+}
+
+a img{
+    position: relative;
+    left: 40.7%;
+    width: 30px;
+    transition: all 1s;
+    margin-top: 1px;
+}
+a img:hover{
+    transform: translateY(-6px);
+    width: 35px;
+    left: 40%;
+}
+
+@media  (min-width: 1200px) and (max-width: 1340px){
+
+  .MisProyectos{
+    height: 175vh;
+}
+
+  .card2 {
+    left: 5.7%;
+  }
+  .container2 {
+    width: 330px;
+    height: 300px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg) translateX(-65px);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg) translateX(65px);
+}
+.front2 img{
+  width: 305px;
+  height: 200px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 17px;
+}
+
+a img{
+  margin-top: 7px;
+}
+
+a img:hover{
+  transform: translateY(-5px);
+  width: 35px;
+  left: 40%;
+}
+
+
+}
+@media  (min-width: 1050px) and (max-width: 1100px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: left;
+  }
+  .MisProyectos{
+    height: 175vh;
+}
+
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 14px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+
+}
+
+@media  (min-width: 1016px) and (max-width: 1050px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 175vh;
+}
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 14px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+
+}
+
+@media  (min-width: 932px) and (max-width: 1016px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 227vh;
+}
+
+  .card2 {
+    left: 6%;
+  }
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 14px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+
+}
+@media  (min-width: 683px) and (max-width: 932px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 225vh;
+}
+
+  .card2 {
+    left: 0;
+  }
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 15px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+  .back2{
+    padding: 5px;
+  }
+
+  .back2 li{
+    margin-top: 7px;
+  }
+  .aux2{
+    padding: 5px;
+  }
+}
+@media  (min-width: 627px) and (max-width: 683px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 400vh;
+}
+
+  .card2 {
+    left: 0;
+  }
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 15px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+  .back2{
+    padding: 5px;
+  }
+
+  .back2 li{
+    margin-top: 7px;
+  }
+  .aux2{
+    padding: 5px;
+  }
+}
+@media  (min-width: 425px) and (max-width: 627px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 400vh;
+}
+
+  .card2 {
+    left: 0;
+  }
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 15px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+  .back2{
+    padding: 5px;
+  }
+
+  .back2 li{
+    margin-top: 7px;
+  }
+  .aux2{
+    padding: 5px;
+  }
+}
+
+@media  (min-width: 425px) and (max-width: 455px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 400vh;
+}
+
+  .card2 {
+    left: 0;
+  }
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 15px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+  .back2{
+    padding: 5px;
+  }
+
+  .back2 li{
+    margin-top: 7px;
+  }
+  .aux2{
+    padding: 5px;
+  }
+
+  .Fondo-Trasparente h2{
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+}
+@media  (min-width: 385px) and (max-width: 425px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 400vh;
+}
+
+  .card2 {
+    left: 0;
+  }
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 15px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+  .back2{
+    padding: 5px;
+  }
+
+  .back2 li{
+    margin-top: 7px;
+  }
+  .aux2{
+    padding: 5px;
+  }
+
+  .Fondo-Trasparente h2{
+    font-size: 55px;
+    letter-spacing: 5px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+}
+
+@media  (min-width: 340px) and (max-width: 385px){
+  .Test{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(305px, 1fr)
+    );
+    row-gap: 20px;
+    place-items: center;
+  }
+  .MisProyectos{
+    height: 400vh;
+}
+
+  .card2 {
+    left: 0;
+  }
+  .container2 {
+    width: 300px;
+    height: 330px;
+}
+
+.container2:hover > .card2 {
+  transform: rotateX(180deg);
+}
+.container2:hover > .right {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+.container2:hover > .Left {
+  transform: rotateY(-180deg) rotateZ(-180deg);
+}
+.front2 img{
+  width: 280px;
+  height: 210px;
+  margin-top: 20px;
+}
+.front2 h3{
+  top: 10px;
+}
+
+.back2 p{
+  font-size: 15px;
+}
+
+a img{
+  margin-top: 22px;
+  left: 38.5%;
+}
+
+a img:hover{
+  transform: translateY(-8px);
+  width: 30px;
+  left: 38.5%;
+}
+  .back2{
+    padding: 5px;
+  }
+
+  .back2 li{
+    margin-top: 7px;
+  }
+  .aux2{
+    padding: 5px;
+  }
+
+  .Fondo-Trasparente h2{
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+}
+.Test{
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(333px, 1fr)
+  );
+  row-gap: 50px;
+  place-items: center;
+}
+
+/* 
+.q{
+  width: 300px;
+  height: 210px;
+  background-color: #ffffff;
+}
+
+.w{
+  width: 300px;
+  height: 210px;
+  background-color: #000000;
+}
+.e{
+  width: 300px;
+  height: 210px;
+  background-color: #392121;
+}
+.r{
+  width: 300px;
+  height: 210px;
+  background-color: #2e2139;
+}
+
+.t{
+  width: 300px;
+  height: 210px;
+  background-color: #8800ff;
+}
+
+
+.y{
+  width: 300px;
+  height: 210px;
+  background-color: #8800ff;
+} */

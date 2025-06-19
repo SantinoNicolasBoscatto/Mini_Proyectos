@@ -1,0 +1,232 @@
+﻿/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+.wrapper {
+    display: flex;
+    max-width: 88%;
+    position: relative;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+    .wrapper i {
+        align-items: center;
+        height: 44px;
+        width: 44px;
+        color: #343F4F;
+        cursor: pointer;
+        font-size: 1.15rem;
+        position: absolute;
+        text-align: center;
+        line-height: 44px;
+        background: #fff;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.1s linear;
+    }
+
+        .wrapper i:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+
+        .wrapper i:hover {
+            background: #f2f2f2;
+        }
+
+        .wrapper i:first-child {
+            left: -22px;
+            display: none;
+        }
+
+        .wrapper i:last-child {
+            right: -22px;
+        }
+
+    .wrapper .carousel {
+        font-size: 0px;
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+    }
+
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+    .carousel.dragging img {
+        pointer-events: none;
+    }
+
+.carousel img {
+    height: 125px;
+    width: 125px;
+    object-fit: contain;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 3.1);
+}
+
+
+    .carousel img:first-child {
+        margin-left: 0px;
+    }
+
+    i{
+        z-index: 999;
+    }
+
+.aux {
+    margin-top: -5rem;
+    background-color: #343F4F;
+    max-width: 100%;
+    margin-left: 6.5rem;
+    margin-right: 6.5rem;
+}
+
+
+.wrapper2 {
+    display: flex;
+    max-width: 88%;
+    height: 50%;
+    position: relative;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+    .wrapper2 i {
+        top: 38%;
+        height: 44px;
+        width: 44px;
+        color: #343F4F;
+        cursor: pointer;
+        font-size: 1.15rem;
+        position: absolute;
+        text-align: center;
+        line-height: 44px;
+        background: #fff;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.1s linear;
+    }
+
+        .wrapper2 i:active {
+            transform: translateY(-50%) scale(0.9);
+        }
+
+        .wrapper2 i:hover {
+            background: #f2f2f2;
+        }
+
+        .wrapper2 i:first-child {
+            left: -22px;
+            display: none;
+        }
+
+        .wrapper2 i:last-child {
+            right: -22px;
+        }
+
+    .wrapper2 .carousel2 {
+        font-size: 0px;
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+    }
+
+.carousel2.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel2.dragging img {
+        pointer-events: none;
+    }
+
+.carousel2 img {
+    height: 125px;
+    width: 125px;
+    object-fit: contain;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 3.1);
+}
+
+.carousel2 img:first-child {
+        margin-left: 0px;
+    }
+
+
+@media screen and (max-width: 992px) {
+    .carousel img {
+        width: calc(100% / 2);
+        height: 125px;
+    }
+
+    .carousel2 img {
+        width: calc(100% / 2);
+        height: 125px;
+    }
+
+    .aux {
+        margin-top: 11rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel img {
+        width: 100%;
+    }
+
+    .carousel2 img {
+        width: 100%;
+    }
+
+    .aux {
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .carousel2 img {
+        width: 100%;
+    }
+
+    .aux {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .carousel2 img {
+        width: 100%;
+    }
+
+    .aux {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}

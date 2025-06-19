@@ -1,0 +1,22 @@
+﻿@{
+}
+@model TipoCuentaDTO
+
+<h1>Editar Tipo Cuenta: @Model.NombreCuenta</h1>
+
+<div asp-validation-summary="ModelOnly"></div>
+<form asp-action="Editar" class="mb-3">
+    <input type="hidden" asp-for="Id"/>
+    <div class="mb-3">
+        <label>Nombre de la cuenta</label>
+        <input type="text" asp-for="NombreCuenta" class="form-control" />
+        <span asp-validation-for="NombreCuenta" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-outline-success">Enviar</button>
+    <a class="btn btn-secondary" asp-action="Index">Volver</a>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean_Architecture.Application\Clean_Architecture.Application.csproj" />
+    <ProjectReference Include="..\Clean_Architecture.Domain\Clean_Architecture.Domain.csproj" />
+    <ProjectReference Include="..\Clean_Architecture.Infrastructure\Clean_Architecture.Data.csproj" />
+    <ProjectReference Include="..\Clean_Architecture.Models\Clean_Architecture.Models.csproj" />
+  </ItemGroup>
+
+</Project>

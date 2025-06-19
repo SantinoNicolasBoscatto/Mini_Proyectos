@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ProyectoDTO>
+
+@if (Model is not null)
+{
+    <h2 class="text-white text-center mt-5" style="font-size: 3.5rem;" id="Pro"> Mis Proyectos </h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card mb-3 text-white">
+                    <img src="@item.Img" class="card-img-top" alt="..." style="width: 100%; height: 250px;">
+                    <div class="card-body" style="background-color: #222;">
+                        <h5 class="card-title">@item.Titulo</h5>
+                        @if (@item.Desc.Length > 245)
+                        {
+                            <p class="card-text" style="font-size: 0.85rem;">@item.Desc</p>
+                        }
+                        else
+                        {
+                            <p class="card-text" style="font-size: 1rem;">@item.Desc</p>
+                        }
+                        <a class="card-text text-decoration-none" href="@item.Link" target="_blank"><small class="text-muted">Ir al Proyecto</small></a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

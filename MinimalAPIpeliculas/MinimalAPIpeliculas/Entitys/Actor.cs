@@ -1,0 +1,13 @@
+﻿using MinimalAPIpeliculas.Repositorio;
+
+namespace MinimalAPIpeliculas.Entitys
+{
+    public class Actor
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; } = null!;
+        public DateTime FechaNacimiento { get; set; }
+        public string? Foto { get; set; }
+        public List<PeliculasService> ListaPeliculaActor { get; set; } = new List<PeliculasService>();
+    }
+}

@@ -1,0 +1,1261 @@
+﻿.MisConocimientos{
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    height: 115vh;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c8697e8a-097a-42b0-bc30-a27bbdccbfbf/dggay13-429f06c0-bd59-4b3a-b112-ed8ffcca0caa.jpg/v1/fit/w_828,h_562,q_70,strp/back_by_santinox51_dggay13-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODY5IiwicGF0aCI6IlwvZlwvYzg2OTdlOGEtMDk3YS00MmIwLWJjMzAtYTI3YmJkY2NiZmJmXC9kZ2dheTEzLTQyOWYwNmMwLWJkNTktNGIzYS1iMTEyLWVkOGZmY2NhMGNhYS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.GIPY_6rjZ-4FFSRxMQ3mQt75wQoXcgr1huAPo3u0Qcc');
+    background-attachment: fixed;
+    top: 55px;
+}
+
+.carta_Proyecto {
+    width: 175px;
+    height: 120px;
+    padding: 0.5rem;
+    position: relative;
+    /* left: 150px; */
+    background: rgb(38, 37, 37);  
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 1.5px  rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: 2s, width .5s, background-color 2s, margin-left 1.5s, margin-top 1s;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .carta_Proyecto:hover {
+    height: 275px;
+    width: 250px;
+    background: #ffffff;
+    transform: skew(0deg);
+    margin-top: -50px;
+  }
+  .sharp:hover, .NET:hover{
+    margin-left: -40px;
+  }
+
+  .CSS:hover, .angular:hover{
+    margin-left: 30px;
+  }
+
+  .carta_Proyecto:hover .Logo{
+    height: 88px;
+    width: 96px;
+  }
+
+  .carta_Proyecto img {
+    height: 72px;
+    width: 78px;
+    color: rgb(218, 244, 237);
+    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+    display: block;
+    margin: 0 auto;
+    margin-top: -1.5vh;
+    transition: width 0.5s ease-in-out, height 0.6s ease-in-out;
+  }
+
+  .align {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-self: flex-start;
+  }
+
+  .list-aling{
+    position: relative;
+    margin-left: -20px;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+
+  h2{
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 33%;
+    margin-top: .5vh;
+    font-size: 60px;
+    letter-spacing: 3px;
+    font-style: italic;
+    margin-bottom: 12vh;
+    display: inline-block;
+  }
+
+  .back{
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.9);
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  
+
+  .row{
+    height: 45vh;
+  }
+
+  .segunda-Fila{
+    position: relative;
+    left: 10px;
+  }
+
+  /* Cosas Que probablemente no deba corregir */
+  .sharp:hover{
+    background: rgb(108, 17, 108);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .Sql:hover{
+    background: rgb(4, 76, 118);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .CSS:hover{
+    background: linear-gradient(to right,#d76c08, #1931c9);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .NET:hover{
+    background: rgb(65, 3, 112);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .Boot:hover{
+    background: rgb(111, 6, 191);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .angular:hover{
+    background: rgb(193, 85, 68);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .sharp li{
+    padding-top: 8px;
+  }
+  .Sql li{
+    padding-top: 1px;
+  }
+  .CSS li{
+    padding-top: 4px;
+  }
+  .NET li{
+    padding-top: 5px;
+  }
+  .Boot li{
+    padding-top: 1px;
+  }
+  .angular li{
+    padding-top: 8px;
+  }
+  
+  .red {
+    width: 10px;
+    height: 10px;
+    margin-top: -1.5vh;
+    margin-bottom: 1vh;
+    border-radius: 50%;
+    background-color: #ff605c;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+    animation: cambioDeColor 3s ease-in-out infinite;
+  }
+  .yellow {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 1vh;
+    margin-top: -1.5vh;
+    border-radius: 50%;
+    background-color: #ffbd44;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+    animation: yelloColor 3s ease-in-out infinite;
+  }
+  .green {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 1vh;
+    margin-top: -1.5vh;
+    border-radius: 50%;
+    background-color: #00ca4e;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+    animation: GreenColor 3s ease-in-out infinite;
+  }
+
+  @keyframes cambioDeColor {
+    0% {
+      background-color: #ff0000; /* Rojo brillante al principio */
+    }
+    50% {
+      background-color: #800000; /* Rojo apagado a la mitad */
+    }
+    100% {
+      background-color: #ff0000; /* Rojo brillante al final */
+    }
+  }
+  @keyframes yelloColor {
+    0% {
+      background-color: #ffbd44; /* Amarillo miel brillante al principio */
+    }
+    50% {
+      background-color: #74560c; /* Amarillo miel apagado a la mitad */
+    }
+    100% {
+      background-color: #ffbd44; /* Amarillo miel brillante al final */
+    }
+  }
+  @keyframes GreenColor {
+    0% {
+      background-color: #00ca4e; /* Verde claro brillante al principio */
+    }
+    50% {
+      background-color: #185c18; /* Verde claro apagado a la mitad */
+    }
+    100% {
+      background-color: #00ca4e; /* Verde claro brillante al final */
+    }
+  }
+  .Test-Conocimiento{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(350px, 1fr)
+    );
+    grid-template-rows: 225px 275px;
+    row-gap: 80x;
+    place-items: center;
+  }
+/* 
+  @media  (min-width: 930px) and (max-width: 1340px) {
+    .carta_Proyecto:hover {
+        height: 265px;
+        width: 250px;
+      }
+      .sharp li{
+        padding-top: 7px;
+      }
+      .Sql li{
+        padding-top: 1px;
+      }
+      .CSS li{
+        padding-top: 4px;
+      }
+      .NET li{
+        padding-top: 3px;
+      }
+      .Boot li{
+        padding-top: 2px;
+      }
+      .angular li{
+        padding-top: 7px;
+      }
+    .carta_Proyecto img {
+        height: 70px;
+        width: 76px;
+      }
+      .carta_Proyecto:hover .Logo{
+        height: 80px;
+        width: 89px;
+      }
+
+      .MisConocimientos{
+        height: 100%;
+      }
+
+      h2{
+        margin-bottom: 18vh;
+      }
+}
+
+@media  (min-width: 850px) and (max-width: 930px) {
+  .MisConocimientos{
+    height: 111vh;
+  }
+  .carta_Proyecto{
+    width: 145px;
+    height: 112px;
+    margin-top: -15px;
+  }
+  .carta_Proyecto:hover {
+      height: 265px;
+      width: 250px;
+    }
+    .sharp li{
+      padding-top: 7px;
+    }
+    .Sql li{
+      padding-top: 1px;
+    }
+    .CSS li{
+      padding-top: 4px;
+    }
+    .NET li{
+      padding-top: 3px;
+    }
+    .Boot li{
+      padding-top: 2px;
+    }
+    .angular li{
+      padding-top: 7px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -40px;
+    }
+}
+
+@media  (min-width: 790px) and (max-width: 850px) {
+  .carta_Proyecto{
+    width: 145px;
+    height: 115px;
+    margin-top: -15px;
+  }
+  .carta_Proyecto:hover {
+      height: 280px;
+      width: 215px;
+    }
+    .sharp li{
+      padding-top: 1px;
+    }
+    .Sql li{
+      padding-top: 1px;
+    }
+    .CSS li{
+      padding-top: 1px;
+    }
+    .NET li{
+      padding-top: 1px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -50px;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+
+    .sharp:hover, .NET:hover{
+      margin-left: -20px;
+    }
+  
+    .CSS:hover, .angular:hover{
+      margin-left: 20px;
+    }
+}
+
+@media  (min-width: 730px) and (max-width: 790px) {
+  .carta_Proyecto{
+    width: 130px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 60px;
+  }
+  .carta_Proyecto:hover {
+      height: 280px;
+      width: 200px;
+    }
+    .sharp li{
+      padding-top: 4px;
+    }
+    .Sql li{
+      padding-top: 1px;
+    }
+    .CSS li{
+      padding-top: 1px;
+    }
+    .NET li{
+      padding-top: 1px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -75px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 20px;
+    }
+    .CSS:hover, .angular:hover{
+      margin-left: -5px;
+    }
+}
+
+@media  (min-width: 670px) and (max-width: 730px) {
+  .carta_Proyecto{
+    width: 130px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 40px;
+  }
+  .carta_Proyecto:hover {
+      height: 280px;
+      width: 200px;
+    }
+    .sharp li{
+      padding-top: 4px;
+    }
+    .Sql li{
+      padding-top: 1px;
+    }
+    .CSS li{
+      padding-top: 1px;
+    }
+    .NET li{
+      padding-top: 1px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -85px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 20px;
+    }
+    .CSS:hover{
+      margin-left: -5px;
+    }
+    .angular:hover{
+      margin-left: -20px;
+    }
+}
+@media  (min-width: 612px) and (max-width: 670px) {
+  .carta_Proyecto{
+    width: 125px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 45px;
+  }
+  .carta_Proyecto:hover {
+      height: 280px;
+      width: 200px;
+    }
+    .sharp li{
+      padding-top: 4px;
+    }
+    .Sql li{
+      padding-top: 4px;
+    }
+    .CSS li{
+      padding-top: 1px;
+    }
+    .NET li{
+      padding-top: 1px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -85px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 35px;
+    }
+    .CSS:hover{
+      margin-left: -10px;
+    }
+    .angular:hover{
+      margin-left: -19px;
+    }
+}
+
+@media  (min-width: 576px) and (max-width: 612px) {
+  .carta_Proyecto{
+    width: 120px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 43px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 310px;
+      width: 150px;
+    }
+    .sharp li{
+      padding-top: 6px;
+    }
+    .Sql li{
+      padding-top: 4px;
+    }
+    .CSS li{
+      padding-top: 6px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -100px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 40px;
+    }
+    .CSS:hover{
+      margin-left: 0px; 
+    }
+    .angular:hover{
+      margin-left: 0px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 10px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+}
+
+@media  (min-width: 535px) and (max-width: 576px) {
+  .carta_Proyecto{
+    width: 120px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 35px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 310px;
+      width: 150px;
+    }
+    .sharp li{
+      padding-top: 6px;
+    }
+    .Sql li{
+      padding-top: 4px;
+    }
+    .CSS li{
+      padding-top: 6px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -107px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 40px;
+    }
+    .CSS:hover{
+      margin-left: 0px; 
+    }
+    .angular:hover{
+      margin-left: 0px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 10px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+}
+@media  (min-width: 485px) and (max-width: 535px) {
+  .carta_Proyecto{
+    width: 120px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 27px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 310px;
+      width: 150px;
+    }
+    .sharp li{
+      padding-top: 6px;
+    }
+    .Sql li{
+      padding-top: 4px;
+    }
+    .CSS li{
+      padding-top: 6px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -115px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 40px;
+    }
+    .CSS:hover{
+      margin-left: 0px; 
+    }
+    .angular:hover{
+      margin-left: 0px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 10px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+}
+
+@media  (min-width: 455px) and (max-width: 485px) {
+  .carta_Proyecto{
+    width: 100px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 35px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 320px;
+      width: 140px;
+    }
+    .sharp li{
+      padding-top: 8px;
+    }
+    .Sql li{
+      padding-top: 0;
+    }
+    .CSS li{
+      padding-top: 6px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -127px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 25px;
+    }
+    .CSS:hover{
+      margin-left: -7px; 
+    }
+    .angular:hover{
+      margin-left: -7px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 10px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+}
+
+@media  (min-width: 425px) and (max-width: 455px) {
+  .carta_Proyecto{
+    width: 100px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 26px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 320px;
+      width: 140px;
+    }
+    .sharp li{
+      padding-top: 8px;
+    }
+    .Sql li{
+      padding-top: 0;
+    }
+    .CSS li{
+      padding-top: 6px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -115px;
+      font-size: 55px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 25px;
+    }
+    .CSS:hover{
+      margin-left: -7px; 
+    }
+    .angular:hover{
+      margin-left: -7px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 10px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+}
+
+@media  (min-width: 400px) and (max-width: 425px) {
+  .carta_Proyecto{
+    width: 90px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 25px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 320px;
+      width: 125px;
+    }
+    .sharp li{
+      padding-top: 8px;
+    }
+    .Sql li{
+      padding-top: 0;
+    }
+    .CSS li{
+      padding-top: 6px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -105px;
+      font-size: 50px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 20px;
+    }
+    .CSS:hover{
+      margin-left: -7px; 
+    }
+    .angular:hover{
+      margin-left: -7px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 9px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+} */
+
+/* Arreglar Resolucion de las letras */
+/* @media  (min-width: 384px) and (max-width: 400px) {
+  .carta_Proyecto{
+    width: 90px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 23px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 320px;
+      width: 125px;
+    }
+    .sharp li{
+      padding-top: 8px;
+    }
+    .Sql li{
+      padding-top: 0;
+    }
+    .CSS li{
+      padding-top: 6px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    .Boot li{
+      padding-top: 0;
+    }
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -105px;
+      font-size: 50px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 20px;
+    }
+    .CSS:hover{
+      margin-left: -10px; 
+    }
+    .angular:hover{
+      margin-left: -10px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 9px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+}
+
+@media  (min-width: 350px) and (max-width: 384px) {
+  .carta_Proyecto{
+    width: 90px;
+    height: 115px;
+    margin-top: -15px;
+    margin-left: 17px;
+    transform: skewX(0deg);
+  }
+  .carta_Proyecto:hover {
+      height: 320px;
+      width: 120px;
+    }
+    .sharp li{
+      padding-top: 10px;
+    }
+    .Sql li{
+      padding-top: 2px;
+    }
+    .CSS li{
+      padding-top: 3px;
+    }
+    .NET li{
+      padding-top: 6px;
+    }
+    
+    .angular li{
+      padding-top: 1px;
+    }
+  .carta_Proyecto img {
+      height: 70px;
+      width: 76px;
+    }
+    .carta_Proyecto:hover .Logo{
+      height: 80px;
+      width: 89px;
+    }
+
+    h2{
+      margin-bottom: 15vh;
+      margin-left: -95px;
+      font-size: 45px;
+    }
+
+    .col-1{
+      width: 0;
+      padding: 0;
+    }
+
+    .col-2{
+      width: 0;
+      padding: 0;
+    }
+
+    .MisConocimientos{
+      height: 100%;
+    }
+    .carta_Proyecto:hover {
+      margin-left: 20px;
+    }
+    .sharp:hover, .NET:hover{
+      margin-left: 20px;
+    }
+    .CSS:hover{
+      margin-left: -14px; 
+    }
+    .angular:hover{
+      margin-left: -14px;  
+    }
+
+    .segunda-Fila{
+      position: relative;
+      left: 0px;
+    }
+
+    .list-aling{
+      font-size: 9px;
+    }
+
+    .col{
+      padding: 0;
+    }
+
+    .Boot li{
+      padding-top: 7px;
+      font-size: 8px;
+    }
+
+} */

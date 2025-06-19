@@ -1,0 +1,9 @@
+﻿namespace MinimalAPIpeliculas.DTO
+{
+    public class LecturaComentarioDTO
+    {
+        public int Id { get; set; }
+        public string Cuerpo { get; set; } = null!;
+        public int PeliculaId { get; set; }
+    }
+}
